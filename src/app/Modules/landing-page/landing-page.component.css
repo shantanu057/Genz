@@ -1,0 +1,53 @@
+.space-lg{
+  padding-top: 7.5rem;
+  padding-left: 7.5rem;
+}
+body{
+  background:  linear-gradient(135deg,#6f42c1 0%, #4582EC 100%);
+  color: #fff;
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.5;
+  text-align: left;
+}
+section {
+  padding: 4.5rem 0;
+  position: relative;
+}
+#carousel {
+  display: block;
+  height: 500px;
+  width: 500px;
+  padding: 2em;
+}
+.btn-lg, .btn-group-lg > .btn {
+  font-size: 1rem;
+}
+.btn-lg, .btn-group-lg > .btn {
+  padding: 0.5000rem 1.5rem;
+  font-size: 1.25rem;
+  border-radius: 0.25rem;
+}
+.btn-success {
+  color: #fff;
+  background-color: #13a570;
+  border-color: #02B875;
+}
+a.text-white {
+  font-weight: 500;
+  transition: opacity .2s ease;
+}
+a.text-white {
+    font-weight: 500;
+    transition: opacity .2s ease;
+}
+.text-white {
+    color: #fff !important;
+}
+.btn-white {
+  background: #fff;
+  color: #3755be;
+}
+.main-container{
+  width: 100%;
+  height: 100%;
+}

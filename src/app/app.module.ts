@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageComponent } from './Modules/landing-page/landing-page.component';
+import { LandingPageModule } from './Modules/landing-page/landing-page.module';
+import { NavbarModule } from './Modules/navbar/navbar.module';
 import { BooksModule } from './Modules/books/books.module'; 
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -14,7 +16,6 @@ import { BookDataService } from './Services/Book Details/BookDetailsData.service
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,9 @@ import { BookDataService } from './Services/Book Details/BookDetailsData.service
     BrowserAnimationsModule,BooksModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule,
-    HttpClientInMemoryWebApiModule.forRoot(BookDataService),
+    HttpClientInMemoryWebApiModule.forRoot(BookDataService),,
+    LandingPageModule,
+    NavbarModule
   ],
   providers: [BookService,BookDataService],
   bootstrap: [AppComponent]
