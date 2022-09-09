@@ -23,7 +23,7 @@ import { BookDataService } from './Services/Book Details/BookDetailsData.service
     BrowserAnimationsModule,BooksModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule,
-    HttpClientInMemoryWebApiModule.forRoot(BookDataService),,
+    HttpClientInMemoryWebApiModule.forRoot(BookDataService),
     LandingPageModule,
     NavbarModule
   ],
