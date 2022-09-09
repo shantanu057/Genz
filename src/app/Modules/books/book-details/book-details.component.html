@@ -1,0 +1,89 @@
+<br><br>
+<div class="row col-md-12" style="margin-left: 20px;">
+    
+    <div class="col-md-3">
+        <h4>Location</h4>
+        <mat-form-field appearance="fill">
+            <mat-label>Select an option</mat-label>
+            <mat-select [(value)]="selectedLocation">
+            <!-- <mat-option>All</mat-option> -->
+            <mat-option value="all">All</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+        </mat-form-field>
+        </div>
+
+    <div class="col-md-3">
+        <h4>College Name</h4>
+        <mat-form-field appearance="fill">
+            <mat-label>Select an option</mat-label>
+            <mat-select [(value)]="selectedCollegeLocation">
+            <!-- <mat-option>All</mat-option> -->
+            <mat-option value="all">All</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+        </mat-form-field>
+        </div>
+
+        <div class="col-md-3">
+            <h4>Course</h4>
+            <mat-form-field appearance="fill">
+                <mat-label>Select an option</mat-label>
+                <mat-select [(value)]="selectedCourse">
+                <!-- <mat-option>All</mat-option> -->
+                <mat-option value="all">All</mat-option>
+                <mat-option value="option2">Option 2</mat-option>
+                <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+            </mat-form-field>
+            </div>
+
+            <div class="col-md-3">
+                <h4>Book Name</h4>
+                <mat-form-field appearance="fill">
+                    <mat-label>Select an option</mat-label>
+                    <mat-select [(value)]="selectedBookname">
+                    <!-- <mat-option>All</mat-option> -->
+                    <mat-option value="all">All</mat-option>
+                    <mat-option value="option2">Option 2</mat-option>
+                    <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                </div>    
+</div>
+
+<button style="margin-left: 45%;background-color: rgb(253, 167, 167);" mat-button color="warn">Filter</button>
+
+<br><br>
+
+<div class="row col-md-12">
+    <div class="col-md-4" *ngFor="let bookdata of data">
+        <mat-card>
+            <img style="margin-left: 25%" src="{{bookdata.imglink}}">
+            <br><br>
+            <div class="row">
+                <div class="col-md-9">
+            <label>Book Name:{{bookdata.bookname}}</label><br>
+            </div>
+            <div class="col-md-3">
+            <label>Price:{{bookdata.price}}</label>
+            </div>
+            </div>
+            <label>Book Author:{{bookdata.bookauthor}}</label><br>
+            <label>Course:{{bookdata.course}}</label><br>
+            
+            <br>
+            <div class="row col-md-12" style="margin-left: 3px;">
+                <div class="col-md-6">
+                <button style="background-color: rgb(98, 211, 255);width: 100%;" mat-button color="primary">Buy</button>
+                </div>
+                <div class="col-md-6">
+                <button style="background-color: rgb(130, 255, 232);width: 100%;" mat-button color="accent">Details</button>
+                </div>
+            </div>
+        </mat-card>
+        <br>
+    </div>
+</div>
