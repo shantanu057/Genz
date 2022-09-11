@@ -8,5 +8,6 @@ export interface Ibooks{
     sellername:string,
     sellerContact:number,
     sellerAddress:string,
-    imglink:string
+    imglink:string,
+    collegename:string
 };
