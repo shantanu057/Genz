@@ -16,6 +16,7 @@ import { QuestionPaperModule } from './Modules/question-paper/question-paper.mod
 import { questionPaperService } from './Services/QuestionPaper Details/questionPaper.service';
 import {MatDialogModule} from '@angular/material/dialog';
 import { PaymentModule } from './Modules/payment/payment.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { PaymentModule } from './Modules/payment/payment.module';
     HttpClientInMemoryWebApiModule,
     HttpClientInMemoryWebApiModule.forRoot(BookDataService),
     LandingPageModule,
-    NavbarModule
+    NavbarModule,MatFormFieldModule
   ],
   providers: [BookService,BookDataService,questionPaperService],
   bootstrap: [AppComponent]
