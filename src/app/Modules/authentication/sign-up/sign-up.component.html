@@ -1,0 +1,115 @@
+<div id="main-wrapper" >
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+            <div class="card border-0">
+                <div class="card-body p-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="mb-5">
+                                    <h1 class="h4 font-weight-bold text-theme" ><b>Registration</b></h1>
+                                </div>
+
+                                 <form  [formGroup]="RegistrationForm" (ngSubmit)="signUp()">
+                                    <div class="form-group">
+                                        <table class="example-full-width" cellspacing="0"><tr>
+                                            <td ><mat-form-field class="example-full-width" appearance="fill">
+                                              <mat-label>Full Name</mat-label>
+                                              <input matInput type="text" formControlName="fullname">
+                                              <mat-error *ngIf="RegistrationForm.get('fullname')!.errors!==null && RegistrationForm.get('fullname')!.errors!['required']">
+                                                FullName is required
+                                              </mat-error>
+                                            </mat-form-field></td>
+                                            <td style="padding-left:20px"><mat-form-field class="example-full-width" appearance="fill">
+                                              <mat-label>Email</mat-label>
+                                              <input matInput type="text" formControlName="email">
+                                              <mat-error *ngIf="RegistrationForm.get('email')!.errors!==null && RegistrationForm.get('email')!.errors!['required']">
+                                                Email is required
+                                              </mat-error>
+                                            </mat-form-field></td>
+                                          </tr></table>
+                                        </div>
+                                    <div class="form-group">
+                                    <table class="example-full-width" cellspacing="0"><tr>
+                                        <td><mat-form-field class="example-full-width" appearance="fill">
+                                          <mat-label>Password</mat-label>
+                                          <input matInput type="text" formControlName="password">
+                                          <mat-error *ngIf="RegistrationForm.get('password')!.errors!==null && RegistrationForm.get('password')!.errors!['required']">
+                                            Password is required
+                                          </mat-error>
+                                        </mat-form-field></td>
+                                        <td style="padding-left:20px"><mat-form-field class="example-full-width" appearance="fill">
+                                          <mat-label>Mobile Number</mat-label>
+                                          <input matInput type="text" formControlName="mobile">
+                                          <mat-error *ngIf="RegistrationForm.get('mobile')!.errors!==null && RegistrationForm.get('mobile')!.errors!['required']">
+                                            mobile is required
+                                          </mat-error>
+                                        </mat-form-field></td>
+                                      </tr></table>
+                                    </div>
+                                    <div class="form-group">
+                                        <table class="example-full-width" cellspacing="0"><tr>
+                                        <mat-form-field appearance="fill">
+                                            <mat-label>College name</mat-label>
+                                            <select matNativeControl required formControlName="clgname">
+                                              <option value="IIT Delhi">IIT Delhi</option>
+                                              <option value="NIT bhopal">NIT Bhopal</option>
+                                              <option value="IIT Mumbai">IIT Mumbai</option>
+                                              <option value="IIT Hyderabad">IIT Hyderabad</option>
+                                            </select>
+                                          </mat-form-field>
+                                         <td style="padding-left:20px"> <mat-form-field appearance="fill">
+                                            <mat-label>College Location</mat-label>
+                                            <select matNativeControl required formControlName="clgLocation">
+                                              <option value="pune">PUNE</option>
+                                              <option value="banglore">BANGLORE</option>
+                                              <option value="mysore">MYSORE</option>
+                                              <option value="jammu">JAMMU</option>
+                                            </select>
+                                          </mat-form-field></td>
+                                            
+                                          </tr></table>
+                                        </div>
+                                        <div class="form-group">
+                                            <table class="example-full-width" cellspacing="0"><tr>
+                                                <td><mat-form-field class="example-full-width" appearance="fill">
+                                                  <mat-label>University name</mat-label>
+                                                  <input matInput type="text" formControlName="Uname" >
+                                                  <mat-error *ngIf="RegistrationForm.get('Uname')!.errors!==null && RegistrationForm.get('Uname')!.errors!['required']">
+                                                    Name is required
+                                                  </mat-error>
+                                                </mat-form-field></td>
+                                                <td style="padding-left:20px"><mat-form-field class="example-full-width" appearance="fill" >
+                                                  <mat-label>Address</mat-label>
+                                                  <input matInput type="text" formControlName="address">
+                                                  <mat-error *ngIf="RegistrationForm.get('address')!.errors!==null && RegistrationForm.get('address')!.errors!['required']">
+                                                    Address is required
+                                                  </mat-error>
+                                                </mat-form-field></td>
+                                              </tr></table>
+                                            </div>
+                                    <button mat-raised-button class="btn btn-primary" style="width:100%" >SignUp</button>
+                                    <p class="text-muted text-center mt-3 mb-0" >Already have an account? <a  routerLink="/login" class="text-primary ml-1">login</a></p>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 d-none d-lg-inline-block" >
+                            <div class="account-block rounded-right" >
+                                <div class="overlay rounded-right"></div>
+                                <div class="account-testimonial">
+                                    <h4 class="text-black mb-4"><b>Register Here</b></h4>
+                                    <p class="lead text-balck"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
