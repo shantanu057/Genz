@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { LoginComponent } from './Modules/authentication/login/login.component';
+import { NavbarComponent } from './Modules/navbar/navbar.component';
+
 
 @Component({
   selector: 'app-root',
@@ -6,12 +9,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private logIn:NavbarComponent){}
   title = 'Genz';
-  public slides = [
-    { src: "/assets/tamanna-rumee-vaTsR-ghLog-unsplash.jpg" },
-    { src: "/assets/jaredd-craig-HH4WBGNyltc-unsplash.jpg" },
-    { src: "/assets/beth-jnr-NtfFqT8JBI0-unsplash.jpg" },
-    { src: "/assets/siora-photography-ZslFOaqzERU-unsplash.jpg" },
-    { src: "/assets/alexander-grey-O2u6gA2esAI-unsplash.jpg" }
-  ];
 }

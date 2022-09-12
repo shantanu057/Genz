@@ -25,16 +25,16 @@ export class SignUpComponent implements OnInit {
       clgLocation:['',Validators.required],
       Uname:['',Validators.required]
 
-  
+
     });
   }
-  signUp(){
+  signUp(RegistrationForm:FormGroup){
     this.http.post<any>("http://localhost:3000/signupUsers",this.RegistrationForm.value)
     .subscribe(res=>{
       alert("Signup Successfull!!")
       this.RegistrationForm.reset();
       this.router.navigate(['login']);
-    
+
     })
 
   }
@@ -43,4 +43,4 @@ export class SignUpComponent implements OnInit {
 
 
 
- 
+
