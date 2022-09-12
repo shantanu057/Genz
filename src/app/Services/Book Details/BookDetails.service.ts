@@ -34,7 +34,7 @@ export class BookService{
         fetchselectedbook(id:string){
             let subject=new ReplaySubject();
              this._http.get<any[]>(this.bookURL).subscribe((data:any[])=>{
-                this.selecteduserbook=data.filter(x=>x.bookid==id);
+                this.selecteduserbook=data.find(x=>x.bookid==id);
                 subject.next(this.selecteduserbook);
                 console.log(this.selecteduserbook);
                 subject.complete();

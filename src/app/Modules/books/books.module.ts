@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { MatInputModule } from '@angular/material/input';
   imports: [
     CommonModule,MatSelectModule,
     MatCardModule,MatButtonModule,FormsModule,
-    ReactiveFormsModule,MatFormFieldModule,MatInputModule
+    ReactiveFormsModule,MatFormFieldModule,MatInputModule,RouterModule
   ],
   exports:[BookDetailsComponent,DisplayBooksComponent]
 })
