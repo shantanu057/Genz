@@ -11,8 +11,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { BookService } from './Services/Book Details/BookDetails.service';
 import { BookDataService } from './Services/Book Details/BookDetailsData.service';
+
 import { TeximateModule } from 'ngx-teximate';
 import { DashboardModule } from './Modules/dashboard/dashboard.module';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
@@ -25,10 +29,15 @@ import { DashboardModule } from './Modules/dashboard/dashboard.module';
     HttpClientModule,
     HttpClientInMemoryWebApiModule,
     HttpClientInMemoryWebApiModule.forRoot(BookDataService),
+
     HomePageModule,
     NavbarModule,
     TeximateModule,
     DashboardModule
+
+    LandingPageModule,
+    NavbarModule,MatFormFieldModule
+
   ],
   providers: [BookService,BookDataService],
   bootstrap: [AppComponent]
