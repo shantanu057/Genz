@@ -1,0 +1,91 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "gouthu",
+      "email": "hrgoutham678@gmail.com",
+      "password": "123",
+      "address": "",
+      "mobile": "7975079311",
+      "clgname": "mandya",
+      "clgLocation": "",
+      "UNS": "",
+      "id": 1
+    },
+    {
+      "fullname": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "address": "",
+      "mobile": "7975079311",
+      "clgname": "VVCE",
+      "clgLocation": "",
+      "UNS": "",
+      "id": 2
+    },
+    {
+      "fullname": "shashank",
+      "email": "shashank@gmail.com",
+      "password": "shashank",
+      "address": "",
+      "mobile": "6712867832",
+      "clgname": "Mit",
+      "clgLocation": "",
+      "UNS": "",
+      "id": 3
+    },
+    {
+      "fullname": "prakhar",
+      "email": "prakhar@gmail.com",
+      "password": "prakhar",
+      "address": "",
+      "mobile": "8888673672",
+      "clgname": "DTM",
+      "clgLocation": "",
+      "UNS": "",
+      "id": 4
+    },
+    {
+      "fullname": "shanthanu",
+      "email": "shanthanu@gmail.com",
+      "password": "shanthanu",
+      "address": "Banglore",
+      "mobile": "797509343",
+      "clgname": "NIT Bhopal",
+      "clgLocation": "Jammu",
+      "Uname": "VVCE",
+      "id": 5
+    },
+    {
+      "fullname": "ganavi",
+      "email": "ganavi@gmail.com",
+      "password": "gana",
+      "address": "mandya",
+      "mobile": "78783498",
+      "clgname": "NIT bhopal",
+      "clgLocation": "jammu",
+      "Uname": "VIT",
+      "id": 6
+    },
+    {
+      "fullname": "amma",
+      "email": "amma@gmail.com",
+      "password": "amma",
+      "address": "kkl",
+      "mobile": "87347878978",
+      "clgname": "IIT Mumbai",
+      "clgLocation": "jammu",
+      "Uname": "tty",
+      "id": 7
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

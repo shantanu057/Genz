@@ -1,0 +1,49 @@
+body{
+    margin-top:20px;
+    background: #f6f9fc;
+}
+.account-block {
+    padding: 0;
+     background-image: url(https://preview.colorlib.com/theme/bootstrap/login-form-07/images/undraw_remotely_2j6y.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:60%;
+    height:50%;
+    position: relative;
+    margin-top: 30%;
+
+
+}
+.account-block .overlay {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+}
+.account-block .account-testimonial {
+    text-align: center;
+    color:black;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    top: 100%;
+}
+
+.text-theme {
+    color: #5369f8 !important;
+}
+
+.btn-theme {
+    background-color: #5369f8;
+    border-color: #5369f8;
+    color:black;
+} .example-container  {
+    margin-left: 100%;
+}
