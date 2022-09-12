@@ -1,0 +1,75 @@
+
+<br><br>
+<div class="row col-md-12" style="margin-left: 55px;">
+    
+    <div class="col-md-3">
+        <h4>Subject</h4>
+        <mat-form-field appearance="fill">
+            <mat-label>Select an option</mat-label>
+            <mat-select [(value)]="selectedSubject" >
+            <!-- <mat-option>All</mat-option> -->
+            <mat-option value="Operating System">All</mat-option>
+            <mat-option value="Java">Option 2</mat-option>
+            <mat-option value="DBMS">Option 3</mat-option>
+            </mat-select>
+        </mat-form-field>
+        </div>
+
+    <div class="col-md-3">
+        <h4>College Name</h4>
+        <mat-form-field appearance="fill">
+            <mat-label>Select an option</mat-label>
+            <mat-select [(value)]="selectedCollegeName">
+            <!-- <mat-option>All</mat-option> -->
+            <mat-option value="all">All</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+        </mat-form-field>
+        </div>
+
+        <div class="col-md-3">
+            <h4>Course</h4>
+            <mat-form-field appearance="fill">
+                <mat-label>Select an option</mat-label>
+                <mat-select [(value)]="selectedCourse">
+                <!-- <mat-option>All</mat-option> -->
+                <mat-option value="all">All</mat-option>
+                <mat-option value="option2">Option 2</mat-option>
+                <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+            </mat-form-field>
+            </div>
+
+            <div class="col-md-3">
+                <br><br>
+<button style="margin-left: 15%;background-color: rgb(253, 167, 167);" mat-button color="warn">Search</button>
+
+                </div>    
+</div>
+
+<br><br>
+
+<div class="row col-md-12">
+    <div class="col-md-4" *ngFor="let questionpaperdata of Qdata">
+        <mat-card>
+            <img style="margin-left: 25%" src="{{questionpaperdata.qimage}}">
+            <br><br>
+            <div class="row">
+                <div class="col-md-9">
+            <label>Subject:{{questionpaperdata.subjectname}}</label><br>
+            </div>
+            </div>
+            <label>College Name:{{questionpaperdata.collegename}}</label><br>
+            <label>Course:{{questionpaperdata.course}}</label><br>
+            
+            <br>
+            <div class="row col-md-12" style="margin-left: 95px;">
+                <div class="col-md-6">
+                <button style="background-color: rgb(98, 211, 255);width: 100%;" (click)="openDialog()" mat-button color="primary">Download</button>
+                </div>
+            </div>
+        </mat-card>
+        <br>
+    </div>
+</div>

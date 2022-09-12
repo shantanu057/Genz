@@ -1,28 +1,40 @@
-.navbar-container .position-absolute, .navbar-container .position-fixed {
-  z-index: 1020;
-  width: 100%;
+/*google font*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,800,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+.navbar{
+	position: fixed;
+	top: 0;
+	z-index: 99999;
+	padding:25px 0;
+}
+.navbar .logo{
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: 750;
+	letter-spacing: 2px;
+}
+.navbar ul.nav{
+	margin-right: 15%;
+}
+.navbar ul.nav li.active,
+.navbar ul.nav li:hover{
+	background:rgba(255, 255, 255, 0.5);
+	color: #000;
 
 }
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "entypo";
-  font-style: normal;
-  font-weight: normal;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #fff;
+.navbar ul.nav li a{
+	color: #fff;
+	font-size: 1em;
+	font-weight: 500;
 }
-h4 {
-  display: inline-block;
-  vertical-align: middle
+.navbar ul.nav li.active a,
+.navbar ul.nav li:hover a{
+	color: #000;
 }
-.navbar-dark .navbar-toggler {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.1);
-}
+
