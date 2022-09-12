@@ -7,7 +7,7 @@ import { TextAnimation } from 'ngx-teximate';
   selector: 'app-landing-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css'],
-  animations: [
+  animations: [ 
     trigger("slideAnimation", [
       transition("void => *", [useAnimation(fadein, {params: { time: '1000ms' }} )]),
       transition("* => void", [useAnimation(fadeOut, {params: { time: '1000ms' }})]),

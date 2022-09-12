@@ -12,6 +12,7 @@ const routes: Routes = [
   {path:'registration',component:SignUpComponent},
   {path:'home-page',component:HomePageComponent},
   {path:'dashboard',component:DashboardComponent},
+
 ];
 
 @NgModule({

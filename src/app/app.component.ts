@@ -11,4 +11,5 @@ import { NavbarComponent } from './Modules/navbar/navbar.component';
 export class AppComponent {
   constructor(private logIn:NavbarComponent){}
   title = 'Genz';
+
 }

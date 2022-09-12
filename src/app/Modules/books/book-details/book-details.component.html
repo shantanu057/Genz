@@ -1,13 +1,18 @@
 <body>
 <br>
-<h1 style="text-align: center;">Filter Your Books Here!!</h1>
-<div class="row col-md-12" style="margin-left: 35px;">
+
+<mat-card style="background-color: #E5E4E2;">
+<h1>Filter Your Books Here!!</h1>
+</mat-card>
+
+<mat-card style="box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;">
+<div class="row col-md-12 mx-auto" >
     
     <div class="col-md-3">
 
           <mat-form-field appearance="fill">
-            <mat-label>Select your location</mat-label>
-            <mat-select matNativeControl required [formControl]="locationControl">
+            <mat-label>Location</mat-label>
+            <mat-select matNativeControl required [formControl]="locationControl" >
               <mat-option value="Indore">Indore</mat-option>
               <mat-option value="Pune">Pune</mat-option>
               <mat-option value="Goa">Goa</mat-option>
@@ -17,13 +22,13 @@
             <mat-error *ngIf="locationControl.hasError('required')">
               This field is required
             </mat-error>
-            <mat-hint>Select the location</mat-hint>
+            <mat-hint>Select Your location</mat-hint>
           </mat-form-field>
         </div>
 
     <div class="col-md-3">
         <mat-form-field appearance="fill">
-            <mat-label>Select your College</mat-label>
+            <mat-label>College</mat-label>
             <mat-select matNativeControl required [formControl]="collegeControl">
                 <mat-option value="Jabalpur Engineering College">Jabalpur Engineering College</mat-option>
                 <mat-option value="IIT Delhi">IIT Delhi</mat-option>
@@ -34,15 +39,14 @@
             <mat-error *ngIf="collegeControl.hasError('required')">
               This field is required
             </mat-error>
-            <mat-hint>Select the College</mat-hint>
+            <mat-hint>Select Your College</mat-hint>
           </mat-form-field>
         </div>
 
         <div class="col-md-3">
             <mat-form-field appearance="fill">
-                <mat-label>Select your Course</mat-label>
+                <mat-label>Course</mat-label>
                 <mat-select matNativeControl required [formControl]="courseControl">
-                  <mat-option label="All"></mat-option>
                   <mat-option value="B.Tech">B.Tech</mat-option>
                   <mat-option value="Law">Law</mat-option>
                   <mat-option value="M.Tech">M.Tech</mat-option>
@@ -50,13 +54,13 @@
                 <mat-error *ngIf="courseControl.hasError('required')">
                   This field is required
                 </mat-error>
-                <mat-hint>Select the Course</mat-hint>
+                <mat-hint>Select Your Course</mat-hint>
               </mat-form-field>
             </div>
 
             <div class="col-md-3">
                 <mat-form-field appearance="fill">
-                    <mat-label>Select your Book</mat-label>
+                    <mat-label>Book</mat-label>
                     <mat-select matNativeControl required [formControl]="bookControl">
                         <mat-option value="OOPS">OOPS</mat-option>
                         <mat-option value="DBMS">DBMS</mat-option>
@@ -72,15 +76,24 @@
                   </mat-form-field>
                 </div>    
 </div>
+
+
 <br>
-<button (click)=" filterbooks()" style="margin-left: 40%;background-color: rgb(255, 0, 0);width: 250px; color: white;" mat-button color="warn">Filter</button>
+<button (click)=" filterbooks()" style="margin-left: 40%;background-color:#5369f8;width: 250px; color: white;" mat-button color="warn">Filter</button>
+
+</mat-card>
 
 
-<br><br><br>
+<br><br>
 
-<div class="row col-md-11" style="overflow-x: hidden;margin-left: 90px; max-width: 100%;">
+<mat-card class="mx-auto" style="background-color: #E5E4E2; width: 90%;">
+<h1>List Of Books!!</h1>
+</mat-card>
+<br>
+<mat-card class="mx-auto" style="width: 90%;background-color: #eeeeee;">
+<div class="row col-md-11 mx-auto" style="max-width: 100%;">
     <div class="col-md-4" *ngFor="let bookdata of data" >
-        <mat-card class="matcard">
+        <mat-card class="matcard" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
             <img style="margin-left: 35px" src="{{bookdata.imglink}}">
             <br><br>
             
@@ -100,14 +113,17 @@
             <br>
             <div class="row col-md-12" style="margin-left: 0px;">
                 <div class="col-md-6">
-                <button style="background-color:rgb(0, 203, 0);width: 100%;color: white;" mat-button color="primary">Buy</button>
+                <button style="background-color:#4CBB17;width: 100%;color: white;" mat-button color="primary">Buy</button>
                 </div>
                 <div class="col-md-6">
-                <button style="background-color: blue;width: 100%; color: white;" mat-button color="accent" (click)="viewBook(bookdata)">Details</button>
+                <!-- <button style="background-color: blue;width: 100%; color: white;" mat-button color="accent" (click)="viewBook(bookdata)">Details</button> -->
+                <button style="background-color: #313F94;width: 100%; color: white;" mat-button color="accent" (click)="viewBook(bookdata)">Details</button>
                 </div>
             </div>
         </mat-card>
         <br>
     </div>
 </div>
+
+</mat-card>
 </body>

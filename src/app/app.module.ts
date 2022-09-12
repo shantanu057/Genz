@@ -10,41 +10,46 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { HomePageModule } from './Modules/home-page/home-page.module';
 import { NavbarModule } from './Modules/navbar/navbar.module';
 import { BooksModule } from './Modules/books/books.module';
-import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { BookService } from './Services/Book Details/BookDetails.service';
 import { BookDataService } from './Services/Book Details/BookDetailsData.service';
-import { DashboardModule } from './Modules/dashboard/dashboard.module';
 import { NavbarComponent } from './Modules/navbar/navbar.component';
 import { LoginComponent } from './Modules/authentication/login/login.component';
+
+import { QuestionPaperModule } from './Modules/question-paper/question-paper.module';
+import { questionPaperService } from './Services/QuestionPaper Details/questionPaper.service';
+import {MatDialogModule} from '@angular/material/dialog';
+import { PaymentModule } from './Modules/payment/payment.module';
+import { DashboardModule } from './Modules/dashboard/dashboard.module';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,
 
-    AppRoutingModule,
-    MatFormFieldModule,
-    BrowserAnimationsModule,
-    MatInputModule,
-    FormsModule,
-    ReactiveFormsModule,
-    AuthenticationModule,
-    HttpClientModule,
-    BooksModule,
+    AppRoutingModule,MatFormFieldModule,
+    BrowserAnimationsModule,MatInputModule,FormsModule,
+    ReactiveFormsModule,AuthenticationModule,HttpClientModule,
+    BooksModule,QuestionPaperModule,PaymentModule,
+
     HttpClientModule,
     HttpClientInMemoryWebApiModule,
     HttpClientInMemoryWebApiModule.forRoot(BookDataService),
     HomePageModule,
     NavbarModule,
     DashboardModule,
+
     HomePageModule,
     NavbarModule,MatFormFieldModule,
+    MatDialogModule
   ],
-  providers: [BookService,BookDataService,LoginComponent,NavbarComponent],
+  providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
