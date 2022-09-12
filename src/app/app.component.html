@@ -1,8 +1,36 @@
 
+
+<!-- <app-navbar></app-navbar> -->
+<!-- <app-book-details></app-book-details> -->
+<!-- <app-question-paper-details></app-question-paper-details> -->
+<app-buy-section></app-buy-section>
+
 <div>
   <app-navbar></app-navbar>
 </div>
+
 <router-outlet></router-outlet>
+
+
+
+
+	<link rel="stylesheet" type="text/css" href="app.component.css"/>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<app-navbar></app-navbar>
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			  <div class="carousel-inner">
+          <app-landing-page [slides]="slides"></app-landing-page>
+			  </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html> -->
 
 
 

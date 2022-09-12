@@ -30,7 +30,7 @@ export class BookDetailsComponent implements OnInit {
     this.bookservice.getBooksByApi().subscribe((bookdata:Ibooks[])=>{
       this.data=bookdata;
     })
-    };
+    }; 
 
   filterbooks(){
     this.bookservice.fetchbooks(this.locationControl.value as string,this.collegeControl.value as string, this.courseControl.value as string, this.bookControl.value as string).subscribe((bookdata)=>{
