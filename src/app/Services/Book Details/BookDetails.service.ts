@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, ReplaySubject} from 'rxjs';
 import { Ibooks } from "src/app/Models/book.module"; 
 
- 
+
 @Injectable()
 export class BookService{
     bookURL:string='api/books';

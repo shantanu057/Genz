@@ -16,7 +16,7 @@ import { MatInputModule } from '@angular/material/input';
   declarations: [
     BooksComponent,
     BookDetailsComponent,
-    DisplayBooksComponent
+    DisplayBooksComponent,
   ],
   imports: [
     CommonModule,MatSelectModule,
