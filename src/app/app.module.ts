@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { AuthenticationModule } from './Modules/authentication/authentication.module';
@@ -14,17 +15,48 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
+import { HomePageModule } from './Modules/home-page/home-page.module';
+import { NavbarModule } from './Modules/navbar/navbar.module';
+import { BooksModule } from './Modules/books/books.module';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { BookService } from './Services/Book Details/BookDetails.service';
+import { BookDataService } from './Services/Book Details/BookDetailsData.service';
+
+import { TeximateModule } from 'ngx-teximate';
+import { DashboardModule } from './Modules/dashboard/dashboard.module';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
+
     AppRoutingModule,MatFormFieldModule,
     BrowserAnimationsModule,MatInputModule,FormsModule,ReactiveFormsModule,AuthenticationModule,HttpClientModule
+
+    AppRoutingModule,
+    BrowserAnimationsModule,BooksModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule,
+    HttpClientInMemoryWebApiModule.forRoot(BookDataService),
+
+    HomePageModule,
+    NavbarModule,
+    TeximateModule,
+    DashboardModule
+
+    LandingPageModule,
+    NavbarModule,MatFormFieldModule
+
+
   ],
-  providers: [],
+  providers: [BookService,BookDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
