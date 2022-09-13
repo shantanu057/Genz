@@ -8,7 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon'
 
 
 
@@ -19,7 +20,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   ],
   imports: [
     CommonModule,MatInputModule,FormsModule,ReactiveFormsModule,AppRoutingModule,HttpClientModule,MatFormFieldModule,
-  
+  MatSelectModule,MatIconModule
   ],
   exports:[LoginComponent,
     SignUpComponent]

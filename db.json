@@ -61,29 +61,8 @@
       "clgLocation": "Jammu",
       "Uname": "VVCE",
       "id": 5
-    },
-    {
-      "fullname": "ganavi",
-      "email": "ganavi@gmail.com",
-      "password": "gana",
-      "address": "mandya",
-      "mobile": "78783498",
-      "clgname": "NIT bhopal",
-      "clgLocation": "jammu",
-      "Uname": "VIT",
-      "id": 6
-    },
-    {
-      "fullname": "amma",
-      "email": "amma@gmail.com",
-      "password": "amma",
-      "address": "kkl",
-      "mobile": "87347878978",
-      "clgname": "IIT Mumbai",
-      "clgLocation": "jammu",
-      "Uname": "tty",
-      "id": 7
     }
+   
   ],
   "profile": {
     "name": "typicode"
