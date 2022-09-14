@@ -20,13 +20,14 @@
 
 <!-- </div> --><br>
 <h1 style="text-align: center;">Buy Section</h1>
-<div class="container">
+<!-- <div class="container"> -->
+  <mat-card class="matcard" style="margin-left: 20px; margin-right: 20px; padding-bottom: 10px;" >
     <div class="row">
     
-      <div class="col-sm-4" style="border:1px solid black;">
-        <div class="card" style="padding-bottom: 10px">
+      <div class="col-sm-4">
+        <mat-card class="matcard" style="padding-bottom: 10px; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;" >
         <h1 style="font-family:'Times New Roman', Times, serif; text-align: center;">Debit Card</h1>
-      <div class="card-body" style="border:1px solid black;padding: 10px">
+      <div class="card-body">
         <!-- <h4 class="card-title">Card title</h4> -->
 
 
@@ -78,14 +79,14 @@
 
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                   <div class="card-body payment-card-body">
-                    
                     <span class="font-weight-normal card-text">Card Number</span>
                     <div class="input">
 
                       <i class="fa fa-credit-card"></i>
-                      <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
-                      
+                      <input  type="text" class="form-control" placeholder="0000 0000 0000 0000" >
+                     
                     </div> 
+                  
 
                     <div class="row mt-3 mb-3">
 
@@ -95,7 +96,7 @@
                         <div class="input">
 
                           <i class="fa fa-calendar"></i>
-                          <input type="text" class="form-control" placeholder="MM/YY">
+                          <input type="text" class="form-control" placeholder="MM/YY" required>
                           
                         </div> 
                         
@@ -116,10 +117,11 @@
                       
 
                     </div>
-                    <button style="background-color: rgb(150, 198, 243);width: 100%;"  mat-button color="primary">Make Payment</button>
+                    <button style="background-color: rgb(150, 198, 243);width: 100%;" (click)="openDialog()" mat-button color="primary">Make Payment</button>
                     <!-- <span class="text-muted certificate-text"><i class="fa fa-lock"></i> Your transaction is secured with ssl certificate</span> -->
                    
                   </div>
+              
                 </div>
               </div>
               
@@ -133,13 +135,13 @@
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a> -->
       </div>
-      </div>
+      </mat-card>
       </div>
       
-      <div class="col-sm-4" style="border:1px solid black;" style="border:1px solid black;">
-         <div class="card" style="padding-bottom: 10px">
+      <div class="col-sm-4" >
+        <mat-card class="matcard" style="padding-bottom: 10px; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;" >
         <h1  style="font-family:'Times New Roman', Times, serif;text-align: center;">Credit Card </h1>
-      <div class="card-body" style="border:1px solid black; padding: 10px">
+      <div class="card-body">
     
         
         <div class="col-md-12">  
@@ -195,7 +197,7 @@
                     <div class="input">
 
                       <i class="fa fa-credit-card"></i>
-                      <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
+                      <input type="text" class="form-control" placeholder="0000 0000 0000 0000" required>
                       
                     </div> 
 
@@ -228,7 +230,7 @@
                       
 
                     </div>
-                    <button style="background-color: rgb(150, 198, 243);width: 100%;"  mat-button color="primary">Make Payment</button>
+                    <button style="background-color: rgb(150, 198, 243);width: 100%;" (click)="openDialog()" mat-button color="primary">Make Payment</button>
                     <!-- <span class="text-muted certificate-text"><i class="fa fa-lock"></i> Your transaction is secured with ssl certificate</span> -->
                    
                   </div>
@@ -246,23 +248,23 @@
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a> -->
       </div>
-      </div>
+      </mat-card >
       </div>
       
-      <div class="col-sm-4" style="border:1px solid black;" style="border:1px solid black;">
-        <div class="card" style="padding-bottom: 10px">
+      <div class="col-sm-4">
+        <mat-card class="matcard" style="padding-bottom: 10px; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;" >
         <h1 style="font-family:'Times New Roman', Times, serif;text-align: center;">UPI</h1>
 
         <span class="font-weight-normal card-text">Enter UPI Id</span>
         <div class="input">
 
           <i class="fa fa-credit-card"></i>
-          <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
-          
+          <input type="text" class="form-control" placeholder="yourname@bankname">
+          <br>
         </div> 
-      <div class="card-body" style="border:1px solid black; padding: 10px">
+      <div class="card-body">
 
-        <google-pay-button style="margin-left: 40px;"
+        <google-pay-button style="margin-left: 55px;"
   environment="TEST"
   buttonType="buy"
   buttonColor="black"
@@ -301,9 +303,24 @@
 ></google-pay-button>
 
       </div>
-      </div>
+      </mat-card>
+      <br>
+      <mat-card class="matcard" style="padding-bottom: 10px; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;" >
+        <h1 style="font-family:'Times New Roman', Times, serif;text-align: center;">Cash On Delivery</h1>
+        <span class="font-weight-normal card-text"> Address</span>
+        <div class="input">
+
+          <i class="fa fa-credit-card"></i>
+          <input type="text" name="address" required class="form-control" placeholder="Enter Your Full Address">
+      
+          <mat-checkbox style="margin-top: 10px; margin-bottom:10px; ">Save Address</mat-checkbox>
+          
+        </div> 
+        <button style="background-color: rgb(150, 198, 243);width: 100%; margin-bottom: 15px;" (click)="openCodDialog()" mat-button color="primary">Place Order</button>
+      </mat-card>
+      
       </div>
       
     </div>
     
-  </div>
+  </mat-card>

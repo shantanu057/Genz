@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
+  
    public RegistrationForm!:FormGroup;
 
   constructor(private _fb:FormBuilder,private http:HttpClient,private router:Router) { }
@@ -30,6 +31,7 @@ export class SignUpComponent implements OnInit {
   }
   signUp(RegistrationForm:FormGroup){
     this.http.post<any>("http://localhost:3000/signupUsers",this.RegistrationForm.value)
+
     .subscribe(res=>{
       alert("Signup Successfull!!")
       this.RegistrationForm.reset();
