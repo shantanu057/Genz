@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { LoginService } from './Services/Login Service/Login.service';
 import { ProfileModule } from './Modules/profile/profile.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -51,7 +52,15 @@ import { ProfileModule } from './Modules/profile/profile.module';
     // HttpClientInMemoryWebApiModule.forRoot(BookDataService),
     HomePageModule,
     DashboardModule,
-   NavbarModule,,MatDialogModule,ProfileModule
+
+
+    NavbarModule,MatFormFieldModule,MatDialogModule,ProfileModule,
+
+
+
+   
+    MatDialogModule
+
   ],
   providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService,LoginService],
   bootstrap: [AppComponent]

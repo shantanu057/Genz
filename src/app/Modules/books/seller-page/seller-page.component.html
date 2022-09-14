@@ -1,0 +1,81 @@
+<br><br>       
+    <form class="example-form" [formGroup]="sellerForm">
+        <div class="container text-center">
+            <div class="col-md-12">
+                <h1 style="text-align: center;"><b>Seller Page</b></h1>
+              </div>
+            <div class="row align-items-start">
+              <div class="col">
+                <mat-form-field class="example-form-field" appearance="fill" style="padding-left:10% ;">
+                    <mat-label>Book Name</mat-label>
+                    <input required id="bookname" type="text" matInput type="text" formControlName="bookname">
+                    <mat-error *ngIf="sellerForm.get('bookname')!.errors!==null && sellerForm.get('bookname')!.errors!['required']">
+                      Name is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field class="example-form-field" appearance="fill" style="padding-left: 3%">
+                        <mat-label>Author</mat-label>
+                        <input matInput type="text" formControlName="author" >
+                        <mat-error *ngIf="sellerForm.get('author')!.errors!==null && sellerForm.get('author')!.errors!['required']">
+                          Author is required
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field class="example-form-field" appearance="fill">
+                            <mat-label>Seller Name</mat-label>
+                            <input matInput type="text" formControlName="sellername" >
+                            <mat-error *ngIf="sellerForm.get('sellername')!.errors!==null && sellerForm.get('sellername')!.errors!['required']">
+                              Name is required
+                            </mat-error>
+                          </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                      <div class="col">
+                        <mat-form-field class="example-form-field" appearance="fill" style="padding-left:10% ;">
+                            <mat-label>Contact</mat-label>
+                            <input matInput type="text" formControlName="number" >
+                            <mat-error *ngIf="sellerForm.get('number')!.errors!==null && sellerForm.get('number')!.errors!['required']">
+                              Contact Number is required
+                            </mat-error>
+                          </mat-form-field>
+                        </div>
+                        <div class="col">
+                            <mat-form-field class="example-form-field" appearance="fill" style="padding-left: 3%">
+                                <mat-label>Price</mat-label>
+                                <input matInput type="text" formControlName="price" >
+                                <mat-error *ngIf="sellerForm.get('price')!.errors!==null && sellerForm.get('price')!.errors!['required']">
+                                   Price is required
+                                </mat-error>
+                              </mat-form-field>
+                            </div>
+                            <div class="col">
+                                <mat-form-field class="example-form-field" appearance="fill">
+                                    <mat-label>Seller Location</mat-label>
+                                    <input matInput type="text" formControlName="sellerlocation" >
+                                    <mat-error *ngIf="sellerForm.get('sellerlocation')!.errors!==null && sellerForm.get('sellerlocation')!.errors!['required']">
+                                      Locationis required
+                                    </mat-error>
+                                  </mat-form-field>
+                                </div>
+                            </div>
+                            
+                            <div class="row align-items-end">
+                                <div class="col">
+                            
+                                    <mat-label>Select your Image  </mat-label>
+                                    <input  type="file" formControlName="browse" >
+                                   
+                                  
+                                </div>
+                            </div>
+                                <br>
+                                <div class="col">
+                                <button mat-raised-button class="btn btn-primary">SELL</button>
+                                </div>
+                            </div>
+                            
+                            </form>
