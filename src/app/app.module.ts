@@ -13,7 +13,6 @@ import { BooksModule } from './Modules/books/books.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { BookService } from './Services/Book Details/BookDetails.service';
 import { BookDataService } from './Services/Book Details/BookDetailsData.service';
-
 import { NavbarComponent } from './Modules/navbar/navbar.component';
 import { LoginComponent } from './Modules/authentication/login/login.component';
 
@@ -22,6 +21,7 @@ import { questionPaperService } from './Services/QuestionPaper Details/questionP
 import {MatDialogModule} from '@angular/material/dialog';
 import { PaymentModule } from './Modules/payment/payment.module';
 import { DashboardModule } from './Modules/dashboard/dashboard.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -43,11 +43,10 @@ import { DashboardModule } from './Modules/dashboard/dashboard.module';
     QuestionPaperModule,
     PaymentModule,
     HttpClientInMemoryWebApiModule,
-    HttpClientInMemoryWebApiModule.forRoot(BookDataService),
+    // HttpClientInMemoryWebApiModule.forRoot(BookDataService),
     HomePageModule,
     NavbarModule,
     DashboardModule,
-
     HomePageModule,
     NavbarModule,
     MatDialogModule
