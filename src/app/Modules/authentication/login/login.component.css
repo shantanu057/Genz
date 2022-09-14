@@ -46,6 +46,13 @@ body{
     background-color: #5369f8;
     border-color: #5369f8;
     color:#5369f8;
-    
-    
-} 
+
+
+}
+.random{
+  border-radius: 4px;
+  box-shadow: rgb(89, 84, 84) 0px 0px 0px 0px,
+
+  rgb(89, 84, 84) 10px 20px 20px 10px;
+  background: #f0eef0;
+}

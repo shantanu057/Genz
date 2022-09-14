@@ -22,7 +22,10 @@ import { questionPaperService } from './Services/QuestionPaper Details/questionP
 import {MatDialogModule} from '@angular/material/dialog';
 import { PaymentModule } from './Modules/payment/payment.module';
 import { DashboardModule } from './Modules/dashboard/dashboard.module';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginService } from './Services/Login Service/Login.service';
 import { ProfileModule } from './Modules/profile/profile.module';
+
 
 
 @NgModule({
@@ -56,7 +59,7 @@ import { ProfileModule } from './Modules/profile/profile.module';
    
     MatDialogModule
   ],
-  providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService],
+  providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
