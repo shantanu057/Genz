@@ -9,17 +9,14 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
-
-
-
 @NgModule({
   declarations: [
     AuthenticationComponent,LoginComponent,SignUpComponent
-   
+
   ],
   imports: [
     CommonModule,MatInputModule,FormsModule,ReactiveFormsModule,AppRoutingModule,HttpClientModule,MatFormFieldModule,
-  
+
   ],
   exports:[LoginComponent,
     SignUpComponent]

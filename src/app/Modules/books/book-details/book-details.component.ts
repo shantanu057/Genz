@@ -35,7 +35,9 @@ export class BookDetailsComponent implements OnInit {
     this.http.get<any>("http://localhost:3000/books").subscribe((bookdata:Ibooks[])=>{
         this.data=bookdata ;
     })
-  }
+
+    }; 
+
 
   filterbooks(){
     // this.bookservice.fetchbooks(this.locationControl.value as string,this.collegeControl.value as string, this.courseControl.value as string, this.bookControl.value as string).subscribe((bookdata)=>{
