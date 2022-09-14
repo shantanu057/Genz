@@ -1,15 +1,16 @@
 import { transition, trigger, useAnimation } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { fadeOut } from 'ng-animate';
 import { Ibooks } from 'src/app/Models/book.module';
 import { BookService } from 'src/app/Services/Book Details/BookDetails.service';
-import {fadeOut,fadein} from './Carousel/carousel.animation'
+import { fadein } from '../display-books/Carousel/carousel.animation';
 
 @Component({
-  selector: 'app-display-books',
-  templateUrl: './display-books.component.html',
-  styleUrls: ['./display-books.component.css'],
+  selector: 'app-update-book',
+  templateUrl: './update-book.component.html',
+  styleUrls: ['./update-book.component.css'],
   animations: [ 
     trigger("slideAnimation", [
       transition("void => *", [useAnimation(fadein, {params: { time: '1000ms' }} )]),
@@ -17,8 +18,7 @@ import {fadeOut,fadein} from './Carousel/carousel.animation'
     ])
   ]
 })
-export class DisplayBooksComponent implements OnInit {
-
+export class UpdateBookComponent implements OnInit {
 
   viewbookname:string='';
   viewcollege:string='';
@@ -37,24 +37,11 @@ export class DisplayBooksComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.preloadImages();
+     this.preloadImages();
 
     this.bookurl=this._ActivatedRoute.snapshot.paramMap.get('id');
 
-  //   this._BookService.fetchselectedbook(this.bookurl as string).subscribe((bookdata:any)=>{
-  //     this.book=bookdata as Ibooks;
-  //     this.viewbookname=bookdata.bookname;
-  //     this.viewcollege=this.book.collegename;
-  //     this.viewcourse=this.book.course;
-  //     this.viewprice=this.book.price;
-  //     this.viewselleraddress=this.book.sellerAddress;
-  //     this.viewbookauthor=this.book.bookauthor;
-  //     this.viewsellercontact=this.book.sellerContact;
-  //     this.viewsellername=this.book.sellername;
-  // })
-
-
-  this.http.get<any>("http://localhost:3000/books").subscribe((bookdata:any[])=>{
+    this.http.get<any>("http://localhost:3000/books").subscribe((bookdata:any[])=>{
       this.book=bookdata.find(x=>x.bookid==this.bookurl);
       this.viewbookname=this.book.bookname;
       this.viewcollege=this.book.collegename;
@@ -90,5 +77,4 @@ export class DisplayBooksComponent implements OnInit {
     const next = this.currentSlide + 1;
     this.currentSlide = next === this.slides.length ? 0 : next;
   }
-
 }

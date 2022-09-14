@@ -5,4 +5,5 @@ export interface IquestionPaper{
     collegename:string,
     course:string,
     qimage:any,
+    sellerid:string
 };
