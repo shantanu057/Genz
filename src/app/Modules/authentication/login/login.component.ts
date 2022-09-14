@@ -10,14 +10,14 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   StudentForm!:FormGroup;
-
+  logIn:string='false'
   constructor(private _fb:FormBuilder,private http:HttpClient,private router:Router) { }
 
   ngOnInit(): void {
     this.StudentForm=this._fb.group({
       email:['',Validators.required],
       password:['',Validators.required],
-  
+
     });
   }
   login(){
@@ -28,15 +28,15 @@ export class LoginComponent implements OnInit {
       });
       if(user){
         alert(("Login Success!!"));
+        this.logIn = 'true'
         this.StudentForm.reset();
         this.router.navigate(['dashboard'])
       }else{
         alert("user not found!!");
       }
     })
-    
   }
 }
 
 
-  
+

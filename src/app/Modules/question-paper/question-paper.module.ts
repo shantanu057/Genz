@@ -5,9 +5,12 @@ import { QuestionPaperDetailsComponent } from './question-paper-details/question
 
 
 import {MatSelectModule} from '@angular/material/select';
-import {MatCardModule} from '@angular/material/card';
+import {MatCardImage, MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -16,7 +19,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     QuestionPaperDetailsComponent
   ],
   imports: [
-    CommonModule,MatSelectModule,MatCardModule,MatButtonModule,MatDialogModule
+    CommonModule,MatSelectModule,MatCardModule,MatButtonModule,MatDialogModule,
+    FormsModule,ReactiveFormsModule,MatFormFieldModule,MatInputModule
   ],
   exports:[QuestionPaperDetailsComponent]
 })
