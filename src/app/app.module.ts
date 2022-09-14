@@ -50,7 +50,6 @@ import { ProfileModule } from './Modules/profile/profile.module';
     HttpClientInMemoryWebApiModule,
     // HttpClientInMemoryWebApiModule.forRoot(BookDataService),
     HomePageModule,
-    NavbarModule,
     DashboardModule,
    NavbarModule,,MatDialogModule,ProfileModule
   ],

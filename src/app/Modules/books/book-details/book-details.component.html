@@ -8,21 +8,13 @@
 <mat-card style="background-image: linear-gradient(to right, black, white)">
 
 <h1 style="text-align: center;">Filter Your Books Here!!</h1>
-<div class="row col-md-12" style="margin-left: 35px;">
-  
-
-<h1>Filter Your Books Here!!</h1>
 </mat-card>
 
 <mat-card>
 <div class="row col-md-12 mx-auto" >
-    
+
 
     <div class="col-md-2">
-
-
-
-
           <mat-form-field appearance="fill">
             <mat-label>Location</mat-label>
             <mat-select matNativeControl required [formControl]="locationControl" >
@@ -87,8 +79,8 @@
                     </mat-error>
                     <mat-hint>Select Your Book</mat-hint>
                   </mat-form-field>
-                </div>  
-                
+                </div>
+
                 <div class="col-md-2">
                   <button (click)=" filterbooks()" style="margin-left: 10%;background-color:#5369f8;width: 50px; color: white;height:60px" mat-button color="warn" >Search</button>
                 </div>
@@ -110,13 +102,13 @@
 <mat-card class="mx-auto" style="width: 90%;background-color: #eeeeee;">
 <div class="row col-md-11 mx-auto" style="max-width: 100%;">
     <div class="col-md-4" *ngFor="let bookdata of data" >
-        <!-- <mat-card class="matcard" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+        <mat-card class="matcard" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
             <img style="margin-left: 35px" src="{{bookdata.imglink}}">
             <br><br>
-            
-               
+
+
             <label>Book Name:{{bookdata.bookname}}</label><br>
-            
+
             <label>Book Author:{{bookdata.bookauthor}}</label><br>
             <div class="row">
                 <div class="col-md-8">
@@ -126,7 +118,7 @@
                     <label>Price:{{bookdata.price}}</label>
                 </div>
             </div>
-            
+
             <br>
             <div class="row col-md-12" style="margin-left: 0px;">
                 <div class="col-md-6">
@@ -136,7 +128,7 @@
                 <button style="background-color: #313F94;width: 100%; color: white;" mat-button color="accent" (click)="viewBook(bookdata)">Details</button>
                 </div>
             </div>
-        </mat-card> -->
+        </mat-card>
 
 
         <!-- <section class="wrapper">
@@ -167,9 +159,9 @@
                   </div>
                 </div>
               </div></div>
-          
+
         </div>
-          
+
         </div>
         </section> -->
 
@@ -214,7 +206,7 @@
               </div>
               </div>
             </div>
-            
+
           </div>
         </div>-->
 
@@ -222,7 +214,7 @@
 
         <br>
     </div>
-</div> 
+</div>
 
 
 </mat-card>
