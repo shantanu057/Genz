@@ -6,14 +6,14 @@
 
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-	<link rel="stylesheet" type="text/css" href="display-books.component.css"/>
+	<link rel="stylesheet" type="text/css" href="update-book.component.css"/>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <div style="margin-top: 5%;">
 <mat-card style=" background-color: #E5E4E2;box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="col-md-10 mx-auto">
-<h1 style="text-align: center;">Book Details</h1>
+<h1 style="text-align: center;">Update Book</h1>
 </mat-card>
 
 <br>
@@ -43,8 +43,14 @@
                       </div>
                     </div>
             </div>
-            
+            <div>
+                     <mat-label>Upload Image</mat-label>
+                     <input type="file">
+                  
+            </div>
         </div>
+
+
         <div class="col-md-8">
             <div class="row col-md-12">
                 <div class="col-md-6">
@@ -101,10 +107,10 @@
             <br><br>
             <div class="row col-md-12">
                 <div class="col-md-6">
-                    <button style="background-color:#4CBB17;width: 100%;color: white;" mat-button color="primary">Buy</button>
+                    <button style="background-color:#4CBB17;width: 100%;color: white;" mat-button color="primary">Update</button>
                 </div>
                 <div class="col-md-6">
-                    <a [routerLink]="['/app-book-details']"><button style="background-color: #313F94;width: 100%; color: white;" mat-button color="accent" >Back To Books</button></a>
+                    <button style="background-color: #313F94;width: 100%; color: white;" mat-button color="accent" >Back To Books</button>
                 </div>
             </div>   
         </div>

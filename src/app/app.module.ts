@@ -13,6 +13,7 @@ import { BooksModule } from './Modules/books/books.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { BookService } from './Services/Book Details/BookDetails.service';
 import { BookDataService } from './Services/Book Details/BookDetailsData.service';
+
 import { NavbarComponent } from './Modules/navbar/navbar.component';
 import { LoginComponent } from './Modules/authentication/login/login.component';
 
@@ -23,7 +24,7 @@ import { PaymentModule } from './Modules/payment/payment.module';
 import { DashboardModule } from './Modules/dashboard/dashboard.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './Services/Login Service/Login.service';
-
+import { ProfileModule } from './Modules/profile/profile.module';
 
 
 
@@ -34,19 +35,28 @@ import { LoginService } from './Services/Login Service/Login.service';
   ],
   imports: [
     BrowserModule,
-
-    AppRoutingModule,MatFormFieldModule,
-    BrowserAnimationsModule,MatInputModule,FormsModule,
-    ReactiveFormsModule,AuthenticationModule,HttpClientModule,
-    BooksModule,QuestionPaperModule,PaymentModule,
+    AppRoutingModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AuthenticationModule,
+    HttpClientModule,
+    BooksModule,
+    QuestionPaperModule,
+    PaymentModule,
     HttpClientInMemoryWebApiModule,
     // HttpClientInMemoryWebApiModule.forRoot(BookDataService),
     HomePageModule,
     NavbarModule,
     DashboardModule,
 
-    HomePageModule,
-    NavbarModule,MatFormFieldModule,
+    NavbarModule,MatFormFieldModule,MatDialogModule,ProfileModule
+
+
+
+   
     MatDialogModule
   ],
   providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService,LoginService],
