@@ -42,12 +42,12 @@ export class QuestionPaperDetailsComponent implements OnInit {
     })
   }
 
-  
+
   selectedSubject = 'all';
   selectedCollegeName = 'all';
   selectedCourse = 'all';
 }
- 
+
 @Component({
   selector: 'dialog-elements-example-dialog',
   templateUrl: 'questionPaperDownload.dialog.html',
