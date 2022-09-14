@@ -29,6 +29,7 @@ h1{
     background-color: #cccccc;
 } */
 
+
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 .gr-1 {
@@ -147,3 +148,4 @@ h1{
   color: white;
   z-index: 0;
 }
+

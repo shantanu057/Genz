@@ -24,7 +24,7 @@
 }
 .navbar ul.nav li.active,
 .navbar ul.nav li:hover{
-	background:rgba(255, 255, 255, 0.5);
+	background:#fff;
 	color: #000;
 
 }
@@ -37,3 +37,9 @@
 .navbar ul.nav li:hover a{
 	color: #000;
 }
+
+
+
+
+
+
