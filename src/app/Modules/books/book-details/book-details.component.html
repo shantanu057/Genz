@@ -120,7 +120,7 @@
             </div>
 
             <br>
-            <div class="row col-md-12" style="margin-left: 0px;">
+            <div class="row col-md-12" style="margin-left: 0px;" *ngIf="admin==''">
                 <div class="col-md-6">
                 <button style="background-color:#4CBB17;width: 100%;color: white;" mat-button color="primary">Buy</button>
                 </div>
@@ -128,6 +128,17 @@
                 <button style="background-color: #313F94;width: 100%; color: white;" mat-button color="accent" (click)="viewBook(bookdata)">Details</button>
                 </div>
             </div>
+            <div class="row col-md-12" style="margin-left: 0px;" *ngIf="admin=='admin@gmail.com'">
+              <div class="col-md-4">
+                <button style="background-color:#4CBB17;width: 100%;color: white;" (click)="editBook(bookdata)">Edit</button>
+              </div>
+              <div class="col-md-4">
+                <button style="background-color: #313F94;width: 100%; color: white;" (click)="viewBook(bookdata)">View</button>
+              </div>
+              <div class="col-md-4">
+                <button style="background-color: red;width: 100%; color: white;" (click)="deleteBook(bookdata)">Delete</button>
+              </div>
+          </div>
         </mat-card>
 
 
@@ -216,8 +227,6 @@
     </div>
 </div>
 
-
-</mat-card>
 
 </mat-card>
 </body>

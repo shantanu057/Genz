@@ -12,9 +12,6 @@ export class AppComponent implements OnInit {
   href:string=''
   constructor(private logIn:LoginComponent,private route: Router){}
   ngOnInit(): void {
-    this.logIn.subject$.subscribe((data:string)=>{
-      this.login = data;
-    });
   }
   title = 'Genz';
 

@@ -51,7 +51,7 @@ import { ProfileModule } from './Modules/profile/profile.module';
     // HttpClientInMemoryWebApiModule.forRoot(BookDataService),
     HomePageModule,
     DashboardModule,
-   NavbarModule,,MatDialogModule,ProfileModule
+   NavbarModule,MatDialogModule,ProfileModule
   ],
   providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService,LoginService],
   bootstrap: [AppComponent]

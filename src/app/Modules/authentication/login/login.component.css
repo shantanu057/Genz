@@ -51,8 +51,8 @@ body{
 }
 .random{
   border-radius: 4px;
-  box-shadow: rgb(89, 84, 84) 0px 0px 0px 0px,
+  box-shadow: rgb(172, 165, 165) 0px 0px 0px 0px,
 
-  rgb(89, 84, 84) 10px 20px 20px 10px;
+  rgb(172, 165, 165) 10px 20px 20px 10px;
   background: #f0eef0;
 }

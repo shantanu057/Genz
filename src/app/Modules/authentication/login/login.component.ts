@@ -13,6 +13,7 @@ import { LoginService } from 'src/app/Services/Login Service/Login.service';
 export class LoginComponent implements OnInit {
   StudentForm!:FormGroup;
   logIn:string='false'
+  admin:string=''
   constructor(private _fb:FormBuilder,private http:HttpClient,private router:Router,private _login:LoginService) { }
 
   ngOnInit(): void {
@@ -21,12 +22,11 @@ export class LoginComponent implements OnInit {
       password:['',Validators.required],
     });
   }
-  isLogin:string="false"
-  users:string=''
-  subject$:any = new BehaviorSubject(1);
-  user$:any = new Subject();
   login(){
     this._login.login(this.StudentForm.value.email,this.StudentForm.value.password)
+  }
+  check(){
+    this._login.checkAdmin(this.StudentForm.value.email,this.StudentForm.value.password)
   }
   href:string=''
   checkDashURL(){
@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
       console.log(this.href)
       }, 50)
   }
+
 }
 
 
