@@ -22,6 +22,7 @@ import { questionPaperService } from './Services/QuestionPaper Details/questionP
 import {MatDialogModule} from '@angular/material/dialog';
 import { PaymentModule } from './Modules/payment/payment.module';
 import { DashboardModule } from './Modules/dashboard/dashboard.module';
+import { ProfileModule } from './Modules/profile/profile.module';
 
 
 @NgModule({
@@ -43,13 +44,16 @@ import { DashboardModule } from './Modules/dashboard/dashboard.module';
     QuestionPaperModule,
     PaymentModule,
     HttpClientInMemoryWebApiModule,
-    HttpClientInMemoryWebApiModule.forRoot(BookDataService),
+    // HttpClientInMemoryWebApiModule.forRoot(BookDataService),
     HomePageModule,
     NavbarModule,
     DashboardModule,
 
-    HomePageModule,
-    NavbarModule,
+    NavbarModule,MatFormFieldModule,MatDialogModule,ProfileModule
+
+
+
+   
     MatDialogModule
   ],
   providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService],

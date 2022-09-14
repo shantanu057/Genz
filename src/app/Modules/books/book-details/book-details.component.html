@@ -1,20 +1,24 @@
+
 <body>
 <br>
+
+<mat-card style="background-image: linear-gradient(to right, black, white)">
 
 <h1 style="text-align: center;">Filter Your Books Here!!</h1>
 <div class="row col-md-12" style="margin-left: 35px;">
   
 
-
-<mat-card style="background-color: #E5E4E2;">
 <h1>Filter Your Books Here!!</h1>
 </mat-card>
 
-<mat-card style="box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;">
+<mat-card>
 <div class="row col-md-12 mx-auto" >
     
 
-    <div class="col-md-3">
+    <div class="col-md-2">
+
+
+
 
           <mat-form-field appearance="fill">
             <mat-label>Location</mat-label>
@@ -32,7 +36,7 @@
           </mat-form-field>
         </div>
 
-    <div class="col-md-3">
+    <div class="col-md-2">
         <mat-form-field appearance="fill">
             <mat-label>College</mat-label>
             <mat-select matNativeControl required [formControl]="collegeControl">
@@ -49,7 +53,7 @@
           </mat-form-field>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-2">
             <mat-form-field appearance="fill">
                 <mat-label>Course</mat-label>
                 <mat-select matNativeControl required [formControl]="courseControl">
@@ -64,7 +68,7 @@
               </mat-form-field>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <mat-form-field appearance="fill">
                     <mat-label>Book</mat-label>
                     <mat-select matNativeControl required [formControl]="bookControl">
@@ -80,26 +84,30 @@
                     </mat-error>
                     <mat-hint>Select Your Book</mat-hint>
                   </mat-form-field>
-                </div>    
+                </div>  
+                
+                <div class="col-md-2">
+                  <button (click)=" filterbooks()" style="margin-left: 10%;background-color:#5369f8;width: 50px; color: white;height:60px" mat-button color="warn" >Search</button>
+                </div>
 </div>
 
 
 <br>
-<button (click)=" filterbooks()" style="margin-left: 40%;background-color:#5369f8;width: 250px; color: white;" mat-button color="warn">Filter</button>
+<!-- <button (click)=" filterbooks()" style="margin-left: 40%;background-color:#5369f8;width: 250px; color: white;" mat-button color="warn">Filter</button> -->
 
 </mat-card>
 
 
 <br><br>
 
-<mat-card class="mx-auto" style="background-color: #E5E4E2; width: 90%;">
+<mat-card class="mx-auto" style="background-image: linear-gradient(to right, black, white); width: 90%;">
 <h1>List Of Books!!</h1>
 </mat-card>
 <br>
 <mat-card class="mx-auto" style="width: 90%;background-color: #eeeeee;">
 <div class="row col-md-11 mx-auto" style="max-width: 100%;">
     <div class="col-md-4" *ngFor="let bookdata of data" >
-        <mat-card class="matcard" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+        <!-- <mat-card class="matcard" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
             <img style="margin-left: 35px" src="{{bookdata.imglink}}">
             <br><br>
             
@@ -122,14 +130,96 @@
                 <button style="background-color:#4CBB17;width: 100%;color: white;" mat-button color="primary">Buy</button>
                 </div>
                 <div class="col-md-6">
-                <!-- <button style="background-color: blue;width: 100%; color: white;" mat-button color="accent" (click)="viewBook(bookdata)">Details</button> -->
                 <button style="background-color: #313F94;width: 100%; color: white;" mat-button color="accent" (click)="viewBook(bookdata)">Details</button>
                 </div>
             </div>
-        </mat-card>
+        </mat-card> -->
+
+
+        <!-- <section class="wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col text-center mb-5">
+                 <h1 class="display-4">Bootstrap 4 Cards With Background Image</h1>
+          <p class="lead">Lorem ipsum dolor sit amet at enim hac integer volutpat maecenas pulvinar. </p>
+              </div>
+            </div>
+          <div class="row">
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4"><div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
+                 <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+                <div class="card-img-overlay d-flex flex-column">
+                 <div class="card-body">
+                    <small class="card-meta mb-2">Thought Leadership</small>
+                    <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                   <small><i class="far fa-clock"></i> October 15, 2020</small>
+                  </div>
+                  <div class="card-footer">
+                   <div class="media">
+          <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+          <div class="media-body">
+            <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+             <small>Director of UI/UX</small>
+          </div>
+        </div>
+                  </div>
+                </div>
+              </div></div>
+          
+        </div>
+          
+        </div>
+        </section> -->
+
+<!-- ///////////////////////////////////////////////////////////////////////////// -->
+        <!-- <div class="container h-100">
+          <div class="row align-middle">
+            <div class="col-md-6 col-lg-4 column">
+              <div class="card gr-1">
+                <div class="txt">
+                  <h1>BRANDING AND </br>
+        CORPORATE DESIGN</h1>
+                  <p>Visual communication and problem-solving</p>
+                </div>
+                <a href="#">more</a>
+                <div class="ico-card">
+                <i class="fa fa-rebel"></i>
+              </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 column">
+              <div class="card gr-2">
+                <div class="txt">
+                  <h1>Web Front-End </br>
+        SOLUTIONS</h1>
+                  <p>How design is implemented on the web.</p>
+                </div>
+                <a href="#">more</a>
+              <div class="ico-card">
+                <i class="fa fa-codepen"></i>
+              </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 column">
+              <div class="card gr-3">
+                <div class="txt">
+                  <h1>UX/UI WEBsite </br>AND MOBILE app</h1>
+                  <p>User Interface and User Experience Design.</p>
+                </div>
+                <a href="#">more</a>
+              <div class="ico-card">
+                <i class="fa fa-empire"></i>
+              </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>-->
+
+
+
         <br>
     </div>
-</div>
+</div> 
 
 </mat-card>
 </body>
