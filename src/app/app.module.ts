@@ -49,14 +49,8 @@ import { ProfileModule } from './Modules/profile/profile.module';
     HttpClientInMemoryWebApiModule,
     // HttpClientInMemoryWebApiModule.forRoot(BookDataService),
     HomePageModule,
-    NavbarModule,
     DashboardModule,
-
-    NavbarModule,MatFormFieldModule,MatDialogModule,ProfileModule
-
-
-
-   
+    NavbarModule,MatFormFieldModule,ProfileModule,
     MatDialogModule
   ],
   providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService,LoginService],
