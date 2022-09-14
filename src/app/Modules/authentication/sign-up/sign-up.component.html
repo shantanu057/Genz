@@ -10,7 +10,7 @@
                                     <h1 class="h4 font-weight-bold text-theme" ><b>Registration</b></h1>
                                 </div>
 
-                                 <form  [formGroup]="RegistrationForm" (ngSubmit)="signUp()">
+                                 <form  [formGroup]="RegistrationForm" (ngSubmit)="signUp(RegistrationForm)">
                                     <div class="form-group">
                                         <table class="example-full-width" cellspacing="0"><tr>
                                             <td ><mat-form-field class="example-full-width" appearance="fill">
@@ -67,7 +67,7 @@
                                               <mat-option value="jammu">JAMMU</mat-option>
                                             </mat-select>
                                           </mat-form-field></td>
-                                            
+
                                           </tr></table>
                                         </div>
                                         <div class="form-group">

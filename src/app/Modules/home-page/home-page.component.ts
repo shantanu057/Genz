@@ -7,7 +7,7 @@ import { TextAnimation } from 'ngx-teximate';
   selector: 'app-landing-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css'],
-  animations: [
+  animations: [ 
     trigger("slideAnimation", [
       transition("void => *", [useAnimation(fadein, {params: { time: '1000ms' }} )]),
       transition("* => void", [useAnimation(fadeOut, {params: { time: '1000ms' }})]),
@@ -15,7 +15,6 @@ import { TextAnimation } from 'ngx-teximate';
   ]
 })
 export class HomePageComponent implements OnInit {
-  @Input() slides: any;
   currentSlide = 0;
   constructor() { }
   ngOnInit(): void {
@@ -42,4 +41,11 @@ export class HomePageComponent implements OnInit {
     delay: 50,
     type: 'letter',
   };
+  public slides = [
+    { src: "/assets/jaredd-craig-HH4WBGNyltc-unsplash.jpg"   },
+    { src: "/assets/tamanna-rumee-vaTsR-ghLog-unsplash.jpg" },
+    { src: "/assets/beth-jnr-NtfFqT8JBI0-unsplash.jpg" },
+    { src: "/assets/siora-photography-ZslFOaqzERU-unsplash.jpg" },
+    { src: "/assets/alexander-grey-O2u6gA2esAI-unsplash.jpg" }
+  ];
 }

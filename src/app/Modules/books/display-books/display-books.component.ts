@@ -1,12 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { transition, trigger, useAnimation } from '@angular/animations';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Ibooks } from 'src/app/Models/book.module';
 import { BookService } from 'src/app/Services/Book Details/BookDetails.service';
+import {fadeOut,fadein} from './Carousel/carousel.animation'
 
 @Component({
   selector: 'app-display-books',
   templateUrl: './display-books.component.html',
-  styleUrls: ['./display-books.component.css']
+  styleUrls: ['./display-books.component.css'],
+  animations: [ 
+    trigger("slideAnimation", [
+      transition("void => *", [useAnimation(fadein, {params: { time: '1000ms' }} )]),
+      transition("* => void", [useAnimation(fadeOut, {params: { time: '1000ms' }})]),
+    ])
+  ]
 })
 export class DisplayBooksComponent implements OnInit {
 
@@ -14,27 +22,58 @@ export class DisplayBooksComponent implements OnInit {
   viewcollege:string='';
   viewcourse:string='';
   viewprice:number=0;
-  viewsellerlocation:string='';
-  viewsubject:string='';
   viewbookauthor:string='';
-  viewsellercontact:string='';
+  viewsellercontact:number=0;
   viewselleraddress:string='';
   viewimage:string='';
-
-  booksview:Ibooks[]=[];
+  viewsellername:string='';
+  book!:Ibooks;
 
   constructor(private _BookService:BookService, private _ActivatedRoute:ActivatedRoute) { }
 
   bookurl:string|null='';
 
   ngOnInit(): void {
-    this.bookurl=this._ActivatedRoute.snapshot.paramMap.get('id');
-  }
 
-  getbook(){
-    this._BookService.fetchselectedbook(this.bookurl as string).subscribe((bookdata)=>{
-    this.booksview=bookdata as Ibooks[];
+    this.preloadImages();
+
+    this.bookurl=this._ActivatedRoute.snapshot.paramMap.get('id');
+
+    this._BookService.fetchselectedbook(this.bookurl as string).subscribe((bookdata:any)=>{
+      this.book=bookdata as Ibooks;
+      this.viewbookname=bookdata.bookname;
+      this.viewcollege=this.book.collegename;
+      this.viewcourse=this.book.course;
+      this.viewprice=this.book.price;
+      this.viewselleraddress=this.book.sellerAddress;
+      this.viewbookauthor=this.book.bookauthor;
+      this.viewsellercontact=this.book.sellerContact;
+      this.viewsellername=this.book.sellername;
   })
 }
+
+  currentSlide = 0;
+  public slides = [
+    { src: "/assets/tamanna-rumee-vaTsR-ghLog-unsplash.jpg" },
+    { src: "/assets/jaredd-craig-HH4WBGNyltc-unsplash.jpg" },
+    { src: "/assets/beth-jnr-NtfFqT8JBI0-unsplash.jpg" },
+    { src: "/assets/siora-photography-ZslFOaqzERU-unsplash.jpg" },
+    { src: "/assets/alexander-grey-O2u6gA2esAI-unsplash.jpg" }
+  ];
+
+  preloadImages() {
+    for (const slide of this.slides) {
+      new Image().src = slide.src;
+    }
+  }
+  onPreviousClick() {
+    const previous = this.currentSlide - 1;
+    this.currentSlide = previous < 0 ? this.slides.length - 1 : previous;
+  }
+
+  onNextClick() {
+    const next = this.currentSlide + 1;
+    this.currentSlide = next === this.slides.length ? 0 : next;
+  }
 
 }
