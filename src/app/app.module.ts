@@ -21,8 +21,11 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { PaymentModule } from './Modules/payment/payment.module';
 import { DashboardModule } from './Modules/dashboard/dashboard.module';
 import { HttpClientModule } from '@angular/common/http';
+
+
 import { LoginService } from './Services/Login Service/Login.service';
 import { ProfileModule } from './Modules/profile/profile.module';
+
 
 
 

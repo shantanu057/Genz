@@ -11,7 +11,7 @@
       "fullname": "gouthu",
       "email": "hrgoutham678@gmail.com",
       "password": "123",
-      "address": "",
+      "address": "mysore",
       "mobile": "7975079311",
       "clgname": "mandya",
       "clgLocation": "",
@@ -22,7 +22,7 @@
       "fullname": "admin",
       "email": "admin@gmail.com",
       "password": "admin",
-      "address": "",
+      "address": "Banglore",
       "mobile": "7975079311",
       "clgname": "VVCE",
       "clgLocation": "",
@@ -33,7 +33,7 @@
       "fullname": "shashank",
       "email": "shashank@gmail.com",
       "password": "shashank",
-      "address": "",
+      "address": "Delhi",
       "mobile": "6712867832",
       "clgname": "Mit",
       "clgLocation": "",
@@ -44,7 +44,7 @@
       "fullname": "prakhar",
       "email": "prakhar@gmail.com",
       "password": "prakhar",
-      "address": "",
+      "address": "MP",
       "mobile": "8888673672",
       "clgname": "DTM",
       "clgLocation": "",
@@ -61,29 +61,17 @@
       "clgLocation": "Jammu",
       "Uname": "VVCE",
       "id": 5
-    },
-    {
-      "fullname": "ganavi",
-      "email": "ganavi@gmail.com",
-      "password": "gana",
-      "address": "mandya",
-      "mobile": "78783498",
-      "clgname": "NIT bhopal",
-      "clgLocation": "jammu",
-      "Uname": "VIT",
-      "id": 6
-    },
-    {
-      "fullname": "amma",
-      "email": "amma@gmail.com",
-      "password": "amma",
-      "address": "kkl",
-      "mobile": "87347878978",
-      "clgname": "IIT Mumbai",
-      "clgLocation": "jammu",
-      "Uname": "tty",
-      "id": 7
     }
+   
+  ],
+  "Users":[
+      {"name":"gouthu","clg name":"mandya","emailid":"hrgoutham678@gmail.com","contact no":"7975079311","address":"mysore","sellerid":"1"},
+      {"name":"admin","clg name":"VVCE","emailid":"admin@gmail.com","contact no":"7975079311","address":"banglore","sellerid":"2"},
+      {"name":"shashank","clg name":"MIT","emailid":"shashank@gmail.com","contact no":"6712867832","address":"delhi","sellerid":"3"},
+      {"name":"prakhar","clg name":"DTM","emailid":"prakhar@gmail.com","contact no":"8888673672","address":"MP","sellerid":"4"},
+      {"name":"shanthanu","clg name":"NIT Bhopal","emailid":"shanthanu@gmail.com","contact no":"8888673672","address":"Banglore","sellerid":"5"}
+      
+      
   ],
 
   "books":[
