@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-buy-section',
@@ -8,50 +9,49 @@ import { Component, OnInit } from '@angular/core';
 export class BuySectionComponent implements OnInit {
 
 
-  // buttonColor='black';
-  // buttonType='buy';
-  // isCustomSize=false;
-  // buttonwidth=240;
-  // buttonHeight=40;
-  // isTop= window===window.top;
-  // paymentRequest={
-  //   apiVersion:2,
-  //   apiVersionMinor:0,
-  //   allowedPaymentMethods:[
-  //    { type:"CARD",
-  //     parameters:{
-  //       allowedPaymentMethods:["PAN_ONLY","CRYPTOGRAM_#DS"],
-  //       allowedCardNetworks:["AMEX","VISA","MASTERCARD"]
-  //     },
-  //   tokenizationSpecification:{
-  //     type:"PAYMENT_GATEWAY",
-  //     parameters:{
-  //       gateway:"example",
-  //       gatewayMerchantI:"exampleGatewayMerchantId"
-  //     }
-  //   }
-  // }
-  //   ],
-  //   merchantInfo:{
-  //     merchant:"123456789",
-  //     merchantName:"demo Merchant"
-  //   },
-  //   transactionInfo:{
-  //     totalPriceStatus:"FINAL",
-  //     totalPriceLabel:"Total",
-  //     totalPrice:"100.00",
-  //     currencyCode:"USD",
-  //     countryCode:"US"
-  //   }
-  // };
   onLoadPaymentData(event:any):void{
     console.log("Load Payment Data",event.detail);
   }
 
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    
+  
+}
+
+  openDialog() {
+    this.dialog.open(DialogElementsPaymentDialog);
   }
+  openCodDialog(){
+    this.dialog.open(DialogElementsCodDialog);
+  }
+
+}
+ 
+@Component({
+  selector: 'dialog-elements-payment-dialog',
+  templateUrl: 'makePayment.dialog.html',
+})
+export class DialogElementsPaymentDialog {
+  
+  constructor(public dialog: MatDialog) { }
+
+  close(){
+    this.dialog.closeAll()
+ }
+
+}
+@Component({
+  selector: 'dialog-elements-cod-dialog',
+  templateUrl: 'cod.dialog.html',
+})
+export class DialogElementsCodDialog {
+  constructor(public dialog: MatDialog) { }
+
+  close(){
+    this.dialog.closeAll()
+ }
 
 }

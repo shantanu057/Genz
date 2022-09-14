@@ -13,10 +13,8 @@ import { BooksModule } from './Modules/books/books.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { BookService } from './Services/Book Details/BookDetails.service';
 import { BookDataService } from './Services/Book Details/BookDetailsData.service';
-
 import { NavbarComponent } from './Modules/navbar/navbar.component';
 import { LoginComponent } from './Modules/authentication/login/login.component';
-
 import { QuestionPaperModule } from './Modules/question-paper/question-paper.module';
 import { questionPaperService } from './Services/QuestionPaper Details/questionPaper.service';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -51,13 +49,7 @@ import { ProfileModule } from './Modules/profile/profile.module';
     HomePageModule,
     NavbarModule,
     DashboardModule,
-
-    NavbarModule,MatFormFieldModule,MatDialogModule,ProfileModule
-
-
-
-   
-    MatDialogModule
+   NavbarModule,,MatDialogModule,ProfileModule
   ],
   providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService,LoginService],
   bootstrap: [AppComponent]
