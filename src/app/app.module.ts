@@ -54,12 +54,15 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardModule,
 
 
+
+
     NavbarModule,MatFormFieldModule,MatDialogModule,ProfileModule,
 
 
 
    
     MatDialogModule
+
 
   ],
   providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService,LoginService],

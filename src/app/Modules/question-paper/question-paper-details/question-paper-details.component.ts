@@ -46,19 +46,19 @@ export class QuestionPaperDetailsComponent implements OnInit {
   //     this.Qdata=questionpaperdata as IquestionPaper[];
   //   })
   this.http.get<any>("http://localhost:3000/questionPapers").subscribe((questtionPaperData:IquestionPaper[])=>{
-  this.Qdata=questtionPaperData.filter(x=>x.subjectname==this.subjectControl.value && x.collegename==this.collegeNameControl.value && x.course==this.courseControl.value)  
+  this.Qdata=questtionPaperData.filter(x=>x.subjectname==this.subjectControl.value && x.collegename==this.collegeNameControl.value && x.course==this.courseControl.value)
   if(this.Qdata.length==0){
-    
+
   }
   })
    }
 
-  
+
   // selectedSubject = 'all';
   // selectedCollegeName = 'all';
   // selectedCourse = 'all';
 }
- 
+
 @Component({
   selector: 'dialog-elements-example-dialog',
   templateUrl: 'questionPaperDownload.dialog.html',

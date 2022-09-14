@@ -4,6 +4,7 @@ import { LoginComponent } from './Modules/authentication/login/login.component';
 import { SignUpComponent } from './Modules/authentication/sign-up/sign-up.component';
 import { BookDetailsComponent } from './Modules/books/book-details/book-details.component';
 import { BooksComponent } from './Modules/books/books.component';
+import { DeleteBookComponent } from './Modules/books/delete-books/delete-books.component';
 import { DisplayBooksComponent } from './Modules/books/display-books/display-books.component';
 import { UpdateBookComponent } from './Modules/books/update-book/update-book.component';
 
@@ -24,7 +25,12 @@ const routes: Routes = [
   {path:'books',component:BooksComponent},
   {path:'app-book-details',component:BookDetailsComponent},
   {path:'app-display-books/:id', component:DisplayBooksComponent},
+
+  {path:'app-update-book/:id',component:UpdateBookComponent},
+  {path:'app-delete-book/:id',component:DeleteBookComponent},
+
   {path:'app-update-book',component:UpdateBookComponent},
+
 
   {path:'app-view-profile/:id', component:ViewProfileComponent},
   {path:'app-questionpaper', component:QuestionPaperDetailsComponent},

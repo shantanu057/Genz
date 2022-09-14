@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { Observable, Subject } from "rxjs";
 
-interface IUsers{
+export interface IUsers{
   fullname: string;
   email: string;
   password: string;
@@ -19,7 +19,9 @@ interface IUsers{
 
 export class LoginService{
   user$:any = new Subject();
+  admin$:any = new Subject();
   myUser:boolean=false
+  myAdmin:string=""
   constructor(private http:HttpClient,private router:Router){}
   users():Observable<IUsers[]>{
     return this.http.get<any>("http://localhost:3000/signupUsers");
@@ -38,6 +40,16 @@ export class LoginService{
       else{
         alert("user not found!!");
       }
-    })
+    });
+  }
+  checkAdmin(email:string,password:string){
+    this.users().subscribe(res=>{
+      const user=res.find((a:IUsers)=>{
+        return a.email===email && a.password===password
+      });
+      if(user?.email=="admin@gmail.com"){
+        this.myAdmin = "admin@gmail.com"
+      }
+    });
   }
 }

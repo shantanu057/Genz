@@ -2,15 +2,14 @@ import { transition, trigger, useAnimation } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { fadeOut } from 'ng-animate';
 import { Ibooks } from 'src/app/Models/book.module';
 import { BookService } from 'src/app/Services/Book Details/BookDetails.service';
-import { fadein } from '../display-books/Carousel/carousel.animation';
+import { fadein, fadeOut } from '../display-books/Carousel/carousel.animation';
 
 @Component({
-  selector: 'app-update-book',
-  templateUrl: './update-book.component.html',
-  styleUrls: ['./update-book.component.css'],
+  selector: 'app-delete-books',
+  templateUrl: './delete-books.component.html',
+  styleUrls: ['./delete-books.component.css'],
   animations: [
     trigger("slideAnimation", [
       transition("void => *", [useAnimation(fadein, {params: { time: '1000ms' }} )]),
@@ -18,7 +17,7 @@ import { fadein } from '../display-books/Carousel/carousel.animation';
     ])
   ]
 })
-export class UpdateBookComponent implements OnInit {
+export class DeleteBookComponent implements OnInit {
 
   viewbookname:string='';
   viewcollege:string='';
