@@ -24,7 +24,7 @@ const routes: Routes = [
   {path:'app-update-book',component:UpdateBookComponent},
   {path:'app-view-profile/:id', component:ViewProfileComponent},
   {path:'app-questionpaper', component:QuestionPaperDetailsComponent},
-  {path:'app-seller-page',component:SellerPageComponent}
+  {path:'app-seller-page',component:SellerPageComponent},
   {path:'home-page',component:HomePageComponent},
 
 ];
