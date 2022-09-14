@@ -22,6 +22,7 @@ import { questionPaperService } from './Services/QuestionPaper Details/questionP
 import {MatDialogModule} from '@angular/material/dialog';
 import { PaymentModule } from './Modules/payment/payment.module';
 import { DashboardModule } from './Modules/dashboard/dashboard.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
