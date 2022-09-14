@@ -12,6 +12,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
+import { UpdateBookComponent } from './update-book/update-book.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -19,12 +22,13 @@ import { RouterModule } from '@angular/router';
     BooksComponent,
     BookDetailsComponent,
     DisplayBooksComponent,
+    UpdateBookComponent,
   ],
   imports: [
     CommonModule,MatSelectModule,
     MatCardModule,MatButtonModule,FormsModule,
-    ReactiveFormsModule,MatFormFieldModule,MatInputModule,RouterModule
+    ReactiveFormsModule,MatFormFieldModule,MatInputModule,RouterModule,HttpClientModule
   ],
-  exports:[BookDetailsComponent,DisplayBooksComponent]
+  exports:[BookDetailsComponent,DisplayBooksComponent,UpdateBookComponent]
 })
 export class BooksModule { }

@@ -1,3 +1,4 @@
+
 img{
     height: 200px;
     width: 200px;
@@ -6,3 +7,21 @@ img{
 .matcard{
     width: 300px;
 }
+
+mat-form-field{
+    width: 200px;
+}
+
+/* mat-form-field,mat-select,mat-label,mat-option,mat-error{
+    background-color: white;
+} */
+
+h1{
+    color: #5369f8;
+    text-align: center;
+}
+
+/* body{
+    background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGlicmFyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
+    background-color: #cccccc;
+} */
