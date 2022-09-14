@@ -12,12 +12,19 @@
 </head>
 
 <div style="margin-top: 5%;">
-<mat-card style=" background-color: #E5E4E2;box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="col-md-10 mx-auto">
-<h1 style="text-align: center;">Book Details</h1>
+<mat-card style=" background-image: linear-gradient(to right,#110f16, #132734);box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="col-md-10 mx-auto">
+    <div class=" row col-md-12" style="margin-top:10px">
+        <div class="col-md-4">
+            <a [routerLink]="['/app-book-details']"><button style="background-color: #313F94;width: 100%; color: white;" mat-button color="accent" >Back To Books</button></a>
+        </div>
+        <div class="col-md-6 mx-auto" >
+            <h1 style="text-align: center; color: white;">Book Details</h1>
+        </div>    
+    </div>
 </mat-card>
 
 <br>
-<mat-card class="col-md-10 mx-auto" style="background-color: #E5E4E2;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
+<mat-card class="col-md-10 mx-auto" style="background-image: linear-gradient(to right,#110f16, #132734);box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
     <div class="row col-md-12">
         <div class="col-md-4">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -48,12 +55,12 @@
         <div class="col-md-8">
             <div class="row col-md-12">
                 <div class="col-md-6">
-                    <mat-card>
+                    <mat-card class="detailsDisplayCard">
                     <label><b>Book Name:</b> {{viewbookname}}</label>
                     </mat-card>
                 </div>
                 <div class="col-md-6">
-                    <mat-card>
+                    <mat-card class="detailsDisplayCard">
                     <label><b>Book Author:</b> {{viewbookauthor}}</label>
                     </mat-card>
                 </div>
@@ -61,12 +68,12 @@
             <br>
             <div class="row col-md-12">
                 <div class="col-md-6">
-                <mat-card>
+                <mat-card class="detailsDisplayCard">
                     <label><b>College Name:</b> {{viewcollege}}</label>
                 </mat-card>
                 </div>
                 <div class="col-md-6">
-                <mat-card>
+                <mat-card class="detailsDisplayCard">
                     <label><b>Course:</b> {{viewcourse}}</label>
                 </mat-card>
                 </div>
@@ -74,12 +81,12 @@
             <br>
             <div class="row col-md-12">
                 <div class="col-md-6">
-                <mat-card>
+                <mat-card class="detailsDisplayCard">
                     <label><b>Seller Name:</b> {{viewsellername}}</label>
                 </mat-card>
                 </div>
                 <div class="col-md-6">
-                <mat-card>
+                <mat-card class="detailsDisplayCard">
                     <label><b>Seller Contact Number:</b> {{viewsellercontact}}</label>
                 </mat-card>
                 </div>
@@ -87,26 +94,21 @@
             <br>
             <div class="row col-md-12">
                 <div class="col-md-6">
-                <mat-card>
+                <mat-card class="detailsDisplayCard">
                     <label><b>Seller Address:</b> {{viewselleraddress}}</label>
                 </mat-card>
                 </div>
                 <div class="col-md-6">
-                <mat-card>
+                <mat-card class="detailsDisplayCard">
                     <label style="color: green;"><b>Book Price:</b> Rs{{viewprice}}</label>
                 </mat-card>
                 </div>
             </div>
 
             <br><br>
-            <div class="row col-md-12">
-                <div class="col-md-6">
-                    <button style="background-color:#4CBB17;width: 100%;color: white;" mat-button color="primary">Buy</button>
-                </div>
-                <div class="col-md-6">
-                    <a [routerLink]="['/app-book-details']"><button style="background-color: #313F94;width: 100%; color: white;" mat-button color="accent" >Back To Books</button></a>
-                </div>
-            </div>   
+
+                <button style="background-color:#4CBB17;width: 30%;color: white; margin-left: 200px;" mat-button color="primary">Buy This Book</button>
+                 
         </div>
     </div>
 </mat-card>
