@@ -21,6 +21,8 @@ import { questionPaperService } from './Services/QuestionPaper Details/questionP
 import {MatDialogModule} from '@angular/material/dialog';
 import { PaymentModule } from './Modules/payment/payment.module';
 import { DashboardModule } from './Modules/dashboard/dashboard.module';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginService } from './Services/Login Service/Login.service';
 
 
 
@@ -37,10 +39,8 @@ import { DashboardModule } from './Modules/dashboard/dashboard.module';
     BrowserAnimationsModule,MatInputModule,FormsModule,
     ReactiveFormsModule,AuthenticationModule,HttpClientModule,
     BooksModule,QuestionPaperModule,PaymentModule,
-
-    HttpClientModule,
     HttpClientInMemoryWebApiModule,
-    HttpClientInMemoryWebApiModule.forRoot(BookDataService),
+    // HttpClientInMemoryWebApiModule.forRoot(BookDataService),
     HomePageModule,
     NavbarModule,
     DashboardModule,
@@ -49,7 +49,7 @@ import { DashboardModule } from './Modules/dashboard/dashboard.module';
     NavbarModule,MatFormFieldModule,
     MatDialogModule
   ],
-  providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService],
+  providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

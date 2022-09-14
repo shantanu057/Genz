@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { LoginService } from 'src/app/Services/Login Service/Login.service';
 
 @Component({
   selector: 'app-login',
@@ -11,30 +13,27 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   StudentForm!:FormGroup;
   logIn:string='false'
-  constructor(private _fb:FormBuilder,private http:HttpClient,private router:Router) { }
+  constructor(private _fb:FormBuilder,private http:HttpClient,private router:Router,private _login:LoginService) { }
 
   ngOnInit(): void {
     this.StudentForm=this._fb.group({
       email:['',Validators.required],
       password:['',Validators.required],
-
     });
   }
+  isLogin:string="false"
+  users:string=''
+  subject$:any = new BehaviorSubject(1);
+  user$:any = new Subject();
   login(){
-    this.http.get<any>("http://localhost:3000/signupUsers")
-    .subscribe(res=>{
-      const user=res.find((a:any)=>{
-        return a.email===this.StudentForm.value.email && a.password===this.StudentForm.value.password
-      });
-      if(user){
-        alert(("Login Success!!"));
-        this.logIn = 'true'
-        this.StudentForm.reset();
-        this.router.navigate(['dashboard'])
-      }else{
-        alert("user not found!!");
-      }
-    })
+    this._login.login(this.StudentForm.value.email,this.StudentForm.value.password)
+  }
+  href:string=''
+  checkDashURL(){
+    setTimeout( ()=>{
+      this.href = this.router.url
+      console.log(this.href)
+      }, 50)
   }
 }
 
