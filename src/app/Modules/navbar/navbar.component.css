@@ -8,7 +8,6 @@
 	font-family: 'Poppins',sans-serif;
 }
 .navbar{
-	position: fixed;
 	top: 0;
 	z-index: 99999;
 	padding:25px 0;
@@ -23,10 +22,9 @@
 	margin-right: 15%;
 }
 .navbar ul.nav li.active,
-.navbar ul.nav li:hover{
-	background:#fff;
+.white:hover{
+	background:#202657;
 	color: #000;
-
 }
 .navbar ul.nav li a{
 	color: #fff;
@@ -35,9 +33,14 @@
 }
 .navbar ul.nav li.active a,
 .navbar ul.nav li:hover a{
-	color: #000;
+	color: #fff;
 }
-
+.navbar ul.nav li.active,
+.red:hover{
+  background: rgb(0, 77, 0);
+  font-size: 1em;
+	font-weight: 500;
+}
 
 
 

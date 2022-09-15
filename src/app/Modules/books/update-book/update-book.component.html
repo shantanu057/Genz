@@ -11,19 +11,25 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
-<div style="margin-top: 5%;">
-<mat-card style=" background-color: #E5E4E2;box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="col-md-10 mx-auto">
-<h1 style="text-align: center;">Update Book</h1>
-</mat-card>
-
+<div style="margin-top: 8%;">
+  <mat-card style=" background-image: linear-gradient(to right,#000428, #004e92);box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="col-md-10 mx-auto">
+    <div class=" row col-md-12" style="margin-top:10px">
+        <div class="col-md-4" style="margin-top: 10px;">
+            <a [routerLink]="['/app-book-details']"><button style="background-color: rgb(81, 83, 192);width: 50%; color: white; margin-left: 90px;" mat-button color="accent" >Back To Books</button></a>
+        </div>
+        <div class="col-md-6 mx-auto" style="margin-top: 10px;">
+            <h1 style="text-align: center; color: white;"><b>Update Details</b></h1>
+        </div>
+    </div>
+  </mat-card>
 <br>
-<mat-card class="col-md-10 mx-auto" style="background-color: #E5E4E2;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
+<mat-card class="col-md-10 mx-auto">
     <div class="row col-md-12">
         <div class="col-md-4">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel" data-ride="carousel">
-                
+
                         <ng-container *ngFor="let slide of slides; let i = index">
                           <img
                             *ngIf="i === currentSlide"
@@ -46,73 +52,74 @@
             <div>
                      <mat-label>Upload Image</mat-label>
                      <input type="file">
-                  
+
             </div>
         </div>
 
 
-        <div class="col-md-8">
-            <div class="row col-md-12">
-                <div class="col-md-6">
-                    <mat-card>
-                    <label><b>Book Name:</b> {{viewbookname}}</label>
-                    </mat-card>
+        <div class="col-md-8" style="margin-top: 70px;">
+          <form class="example-form" style="margin-left: 65px;">
+
+            <div class="row col-sm-12">
+                <div class="col-sm-4">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Book Name</mat-label>
+                    <input matInput type="text" [(ngModel)]="viewbookname" name="Name" placeholder=" Name">
+                    </mat-form-field>
                 </div>
-                <div class="col-md-6">
-                    <mat-card>
-                    <label><b>Book Author:</b> {{viewbookauthor}}</label>
-                    </mat-card>
+                <div class="col-sm-4">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Author</mat-label>
+                    <input matInput type="text" [(ngModel)]="viewbookauthor" name="Author" placeholder="Author">
+                    </mat-form-field>
                 </div>
-            </div>
-            <br>
-            <div class="row col-md-12">
-                <div class="col-md-6">
-                <mat-card>
-                    <label><b>College Name:</b> {{viewcollege}}</label>
-                </mat-card>
-                </div>
-                <div class="col-md-6">
-                <mat-card>
-                    <label><b>Course:</b> {{viewcourse}}</label>
-                </mat-card>
-                </div>
-            </div>
-            <br>
-            <div class="row col-md-12">
-                <div class="col-md-6">
-                <mat-card>
-                    <label><b>Seller Name:</b> {{viewsellername}}</label>
-                </mat-card>
-                </div>
-                <div class="col-md-6">
-                <mat-card>
-                    <label><b>Seller Contact Number:</b> {{viewsellercontact}}</label>
-                </mat-card>
-                </div>
-            </div>
-            <br>
-            <div class="row col-md-12">
-                <div class="col-md-6">
-                <mat-card>
-                    <label><b>Seller Address:</b> {{viewselleraddress}}</label>
-                </mat-card>
-                </div>
-                <div class="col-md-6">
-                <mat-card>
-                    <label style="color: green;"><b>Book Price:</b> Rs{{viewprice}}</label>
-                </mat-card>
+                <div class="col-sm-4">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>College</mat-label>
+                    <input matInput type="text" [(ngModel)]="viewcollege" name="College" placeholder="College">
+                    </mat-form-field>
                 </div>
             </div>
 
-            <br><br>
-            <div class="row col-md-12">
-                <div class="col-md-6">
-                    <button style="background-color:#4CBB17;width: 100%;color: white;" mat-button color="primary">Update</button>
+            <div class="row col-sm-12">
+                <div class="col-sm-4">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Course</mat-label>
+                    <input matInput type="text" [(ngModel)]="viewcourse" name="Course" placeholder="Course">
+                    </mat-form-field>
                 </div>
-                <div class="col-md-6">
-                    <button style="background-color: #313F94;width: 100%; color: white;" mat-button color="accent" >Back To Books</button>
+                <div class="col-sm-4">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Price</mat-label>
+                    <input matInput type="text" [(ngModel)]="viewprice" name="Price" placeholder="Price">
+                    </mat-form-field>
                 </div>
-            </div>   
+                <div class="col-sm-4">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Address</mat-label>
+                  <input matInput type="text" [(ngModel)]="viewaddress" name="Address" placeholder="Address">
+                  </mat-form-field>
+                </div>
+            </div>
+            <div class="row col-sm-12">
+              <div class="col-sm-4">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Contact No.</mat-label>
+                  <input matInput type="text" [(ngModel)]="viewsellercontact" name="Contact" placeholder="Contact No.">
+                  </mat-form-field>
+              </div>
+              <div class="col-sm-4">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Seller Name</mat-label>
+                  <input matInput type="text" [(ngModel)]="viewsellername" name="SellerName" placeholder="Seller Name">
+                  </mat-form-field>
+              </div>
+              <div class="col-sm-4" style="margin-top: 10px;">
+                <button style="background-color:#4CBB17;width: 100%;color: white;" mat-button color="primary">Update</button>
+            </div>
+            </div>
+
+        </form>
         </div>
     </div>
 </mat-card>

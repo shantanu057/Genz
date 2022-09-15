@@ -1,209 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>bootstrap 4 landing page with slider</title>
 
-<br>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
 
-<mat-card style="background-image: linear-gradient(to right,#211d2b, #483681); width: 90%;" class="mx-auto">
-<h1>Filter Your Books Here!!</h1>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-<body>
-<br>
+	<link rel="stylesheet" type="text/css" href="book-details.component.css"/>
 
-</mat-card>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body style=" background-image: linear-gradient(to right,#202657, #5388b5);">
+  <div>
+    <br>
+    <mat-card style=" background-image: linear-gradient(to right,#000428, #004e92); width: 90%;" class="mx-auto">
+    <h1>Filter Your Books Here!!</h1>
+    </mat-card>
 
-<mat-card style="width: 90%; background-color: #ece3f9;" class="mx-auto">
-<div class="row col-md-12 mx-auto" >
+    <mat-card style="width: 90%; background-color: #fff;" class="mx-auto">
+    <div class="row col-md-12 mx-auto" style="margin-top:20px;">
 
-    
-    <div class="col-md-2 mx-auto" style="margin-left: 3%;">
+        <div class="col-md-2 mx-auto" style="margin-left: 3%;">
 
-
-    <div class="col-md-2">
-          <mat-form-field appearance="fill">
-            <mat-label>Location</mat-label>
-            <mat-select matNativeControl required [formControl]="locationControl" >
-              <mat-option value="Indore">Indore</mat-option>
-              <mat-option value="Pune">Pune</mat-option>
-              <mat-option value="Goa">Goa</mat-option>
-              <mat-option value="Puri">Puri</mat-option>
-              <mat-option value="Jammu">Jammu</mat-option>
-            </mat-select>
-            <mat-error *ngIf="locationControl.hasError('required')">
-              This field is required
-            </mat-error>
-            <mat-hint>Select Your location</mat-hint>
-          </mat-form-field>
-        </div>
-
-    <div class="col-md-2" style="margin-left: 0%;">
-        <mat-form-field appearance="fill">
-            <mat-label>College</mat-label>
-            <mat-select matNativeControl required [formControl]="collegeControl">
-                <mat-option value="Jabalpur Engineering College">Jabalpur Engineering College</mat-option>
-                <mat-option value="IIT Delhi">IIT Delhi</mat-option>
-                <mat-option value="NIT Bhopal">NIT Bhopal</mat-option>
-                <mat-option value="IIT Mumbai">IIT Mumbai</mat-option>
-                <mat-option value="IIIT Hyderabad">IIIT Hyderabad</mat-option>
-            </mat-select>
-            <mat-error *ngIf="collegeControl.hasError('required')">
-              This field is required
-            </mat-error>
-            <mat-hint>Select Your College</mat-hint>
-          </mat-form-field>
-        </div>
-
-        <div class="col-md-2" style="margin-left: 3%;">
-            <mat-form-field appearance="fill">
-                <mat-label>Course</mat-label>
-                <mat-select matNativeControl required [formControl]="courseControl">
-                  <mat-option value="B.Tech">B.Tech</mat-option>
-                  <mat-option value="Law">Law</mat-option>
-                  <mat-option value="M.Tech">M.Tech</mat-option>
+              <mat-form-field appearance="fill">
+                <mat-label><b>Location</b></mat-label>
+                <mat-select matNativeControl required [formControl]="locationControl" >
+                  <mat-option value="Indore">Indore</mat-option>
+                  <mat-option value="Pune">Pune</mat-option>
+                  <mat-option value="Goa">Goa</mat-option>
+                  <mat-option value="Puri">Puri</mat-option>
+                  <mat-option value="Jammu">Jammu</mat-option>
                 </mat-select>
-                <mat-error *ngIf="courseControl.hasError('required')">
+                <mat-error *ngIf="locationControl.hasError('required')">
                   This field is required
                 </mat-error>
-                <mat-hint>Select Your Course</mat-hint>
+                <mat-hint><b>Select Your location</b></mat-hint>
               </mat-form-field>
             </div>
 
-            <div class="col-md-2"style="margin-left: 3%;">
+        <div class="col-md-2" style="margin-left: 0%;">
+            <mat-form-field appearance="fill">
+                <mat-label><b>College</b></mat-label>
+                <mat-select matNativeControl required [formControl]="collegeControl">
+                    <mat-option value="Jabalpur Engineering College">Jabalpur Engineering College</mat-option>
+                    <mat-option value="IIT Delhi">IIT Delhi</mat-option>
+                    <mat-option value="NIT Bhopal">NIT Bhopal</mat-option>
+                    <mat-option value="IIT Mumbai">IIT Mumbai</mat-option>
+                    <mat-option value="IIIT Hyderabad">IIIT Hyderabad</mat-option>
+                </mat-select>
+                <mat-error *ngIf="collegeControl.hasError('required')">
+                  This field is required
+                </mat-error>
+                <mat-hint><b>Select Your college</b></mat-hint>
+              </mat-form-field>
+            </div>
+
+            <div class="col-md-2" style="margin-left: 3%;">
                 <mat-form-field appearance="fill">
-                    <mat-label>Book</mat-label>
-                    <mat-select matNativeControl required [formControl]="bookControl">
-                        <mat-option value="OOPS">OOPS</mat-option>
-                        <mat-option value="DBMS">DBMS</mat-option>
-                        <mat-option value="Computer Networking">Computer Networking</mat-option>
-                        <mat-option value="Data Structures">Data Structures</mat-option>
-                        <mat-option value="Operating System">Operating System</mat-option>
-                        <mat-option value="Fluid Mechanics">Fluid Mechanics</mat-option>
+                    <mat-label><b>Course</b></mat-label>
+                    <mat-select matNativeControl required [formControl]="courseControl">
+                      <mat-option value="B.Tech">B.Tech</mat-option>
+                      <mat-option value="Law">Law</mat-option>
+                      <mat-option value="M.Tech">M.Tech</mat-option>
                     </mat-select>
                     <mat-error *ngIf="courseControl.hasError('required')">
                       This field is required
                     </mat-error>
-                    <mat-hint>Select Your Book</mat-hint>
+                    <mat-hint><b>Select Your course</b></mat-hint>
                   </mat-form-field>
-
-                </div>  
-                
-                <div class="col-md-2" style="margin-left: 3%;">
-                  <button (click)=" filterbooks()" style="background-color:#110f16;width: 50px; color: white;height:53px" mat-button color="warn" ><mat-icon>search</mat-icon></button>
-
                 </div>
 
-
-               
-</div>
-<br>
-</mat-card>
-
-<br><br>
-
-<!-- <mat-card class="mx-auto" style="background-image: linear-gradient(to right,#101531, #5369f8); width: 85%;">
-<h1>List Of Books!!</h1>
-</mat-card> -->
-
-<!-- <mat-card class="mx-auto" style="width: 85%;"> -->
-<div class="row col-md-11 mx-auto" >
-    <div class="col-md-4" *ngFor="let bookdata of data" >
-
-        <!-- <mat-card class="matcard" style="box-shadow: #101531 0px 2px 4px, #EDF0FE 0px 7px 13px -3px, #101531 0px -3px 0px inset;">
-
-        <mat-card class="matcard" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
-
-            <img style="margin-left: 35px" src="{{bookdata.imglink}}">
-            <br><br>
-
-
-            <label>Book Name:{{bookdata.bookname}}</label><br>
-
-            <label>Book Author:{{bookdata.bookauthor}}</label><br>
-            <div class="row">
-                <div class="col-md-8">
-                 <label>Course:{{bookdata.course}}</label><br>
-                </div>
-                <div class="col-md-3">
-                    <label>Price:{{bookdata.price}}</label>
-                </div>
-            </div>
-
-            <br>
-            <div class="row col-md-12" style="margin-left: 0px;" *ngIf="admin==''">
-                <div class="col-md-6">
-                <button style="background-color:#4CBB17;width: 100%;color: white;" mat-button color="primary">Buy</button>
-                </div>
-                <div class="col-md-6">
-                <button style="background-color: #313F94;width: 100%; color: white;" mat-button color="accent" (click)="viewBook(bookdata)">Details</button>
-                </div>
-            </div>
-
-            <div class="row col-md-12" style="margin-left: 0px;" *ngIf="admin=='admin@gmail.com'">
-              <div class="col-md-4">
-                <button style="background-color:#4CBB17;width: 100%;color: white;" (click)="editBook(bookdata)">Edit</button>
-              </div>
-              <div class="col-md-4">
-                <button style="background-color: #313F94;width: 100%; color: white;" (click)="viewBook(bookdata)">View</button>
-              </div>
-              <div class="col-md-4">
-                <button style="background-color: red;width: 100%; color: white;" (click)="deleteBook(bookdata)">Delete</button>
-              </div>
-          </div>
-        </mat-card>
-
-        </mat-card>-->
-
-
-
-
-<!-- ///////////////////////////////////////////////////////////////////////////// -->
-        <!-- <div class="container h-100">
-
-          <div class="row align-middle">
-            <div class="col-md-6 col-lg-4 column">
-              <div class="card gr-3">
-                <div class="txt">
-                  <img style="margin-left: 15px" src="{{bookdata.imglink}}">
-                </div>
-                <br>
-                <label>Book Name:{{bookdata.bookname}}</label>
-            
-                <label>Book Author:{{bookdata.bookauthor}}</label>
-                <div class="row">
-                    <div class="col-md-7">
-                    <label>Course:{{bookdata.course}}</label>
+                <div class="col-md-2"style="margin-left: 3%;">
+                    <mat-form-field appearance="fill">
+                        <mat-label><b>Book</b></mat-label>
+                        <mat-select matNativeControl required [formControl]="bookControl">
+                            <mat-option value="OOPS">OOPS</mat-option>
+                            <mat-option value="DBMS">DBMS</mat-option>
+                            <mat-option value="Computer Networking">Computer Networking</mat-option>
+                            <mat-option value="Data Structures">Data Structures</mat-option>
+                            <mat-option value="Operating System">Operating System</mat-option>
+                            <mat-option value="Fluid Mechanics">Fluid Mechanics</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="courseControl.hasError('required')">
+                          This field is required
+                        </mat-error>
+                        <mat-hint><b>Select Your book</b></mat-hint>
+                      </mat-form-field>
                     </div>
-                    <div class="col-md-3">
-                        <label style="color: rgb(109, 255, 109);">Price:{{bookdata.price}}</label>
+                    <div class="col-md-2" style="margin-left: 3%;">
+                      <button (click)=" filterbooks()" style="background-color:#110f16;width: 50px; color: white;height:53px" mat-button color="warn" ><mat-icon>search</mat-icon></button>
                     </div>
-                </div>
-            
-            <br>
-            <div class="row col-md-12">
-                <div class="col-md-6">
-                <a><button style="background-color:rgb(35, 171, 35);width: 100%;color: white;" mat-button color="primary">Buy</button></a>
-                </div>
-                <div class="col-md-6">
-                <a><button style="background-color: #cd1e1e;width: 100%; color: white; " mat-button color="accent" (click)="viewBook(bookdata)">Details</button></a>
-                </div>
-            </div>
-                <div class="ico-card">
-                <i class="fa fa-rebel"></i>
-              </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        
-
-
-        
     </div>
-</div>
+    <br>
+    </mat-card>
 
+    <div class="row col-md-11 mx-auto" >
+        <div class="col-md-4" *ngFor="let bookdata of data" >
+            <div class="container h-100">
+              <div class="row align-middle">
+                <div class="col-md-6 col-lg-4 column">
+                  <div class="card gr-3 random">
+                    <div class="txt">
+                      <img style="margin-left: 15px" src="{{bookdata.imglink}}">
+                    </div>
+                    <br>
+                    <label><strong style="color: red;">Name:</strong> {{bookdata.bookname}}</label>
 
+                    <label><strong style="color: red;">Author:</strong> {{bookdata.bookauthor}}</label>
+                    <div class="row">
+                        <div class="col-md-7">
+                        <label><strong style="color: red;">Course:</strong> {{bookdata.course}}</label>
+                        </div>
+                        <div class="col-md-3">
+                            <label style="color: rgb(109, 255, 109);"><strong>Price:{{bookdata.price}}</strong></label>
+                        </div>
+                    </div>
 
-<!-- </mat-card> -->
+                <br>
+                <div class="row col-md-12" *ngIf="admin==''">
+                  <div class="col-md-6">
+                  <a><button [routerLink]="['/payment']" style="background-color:rgb(35, 171, 35);width: 100%;color: white;" mat-button color="primary">Buy</button></a>
+                  </div>
+                  <div class="col-md-6">
+                  <a><button style="background-color: red;width: 100%; color: white; "mat-button color="danger" (click)="viewBook(bookdata)">Details</button></a>
+                  </div>
+                </div>
+                <div class="row col-md-12" *ngIf="admin=='admin@gmail.com'">
+                  <div class="col-md-4">
+                  <a><button style="background-color:rgb(35, 171, 35);width: 100%;color: white;" mat-button color="primary" (click)="editBook(bookdata)">Edit</button></a>
+                  </div>
+                  <div class="col-md-4">
+                  <a><button style="background-color: blue;width: 100%; color: white; " mat-button color="accent" (click)="viewBook(bookdata)">View</button></a>
+                  </div>
+                  <div class="col-md-4">
+                    <a><button style="background-color: red;width: 100%; color: white; " mat-button color="accent" (click)="deleteBook(bookdata)">Delete</button></a>
+                    </div>
+                  </div>
+                    <div class="ico-card">
+                    <i class="fa fa-rebel"></i>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
 
-</mat-card>
+  </div>
+
 </body>
-
+</html>

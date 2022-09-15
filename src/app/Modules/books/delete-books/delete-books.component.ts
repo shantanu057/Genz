@@ -1,6 +1,7 @@
 import { transition, trigger, useAnimation } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { Ibooks } from 'src/app/Models/book.module';
 import { BookService } from 'src/app/Services/Book Details/BookDetails.service';
@@ -30,7 +31,7 @@ export class DeleteBookComponent implements OnInit {
   viewsellername:string='';
   book!:Ibooks;
 
-  constructor(private _BookService:BookService, private _ActivatedRoute:ActivatedRoute, private http:HttpClient) { }
+  constructor(private _BookService:BookService, private _ActivatedRoute:ActivatedRoute, private http:HttpClient,public dialog: MatDialog,) { }
 
   bookurl:string|null='';
 
@@ -76,4 +77,19 @@ export class DeleteBookComponent implements OnInit {
     const next = this.currentSlide + 1;
     this.currentSlide = next === this.slides.length ? 0 : next;
   }
+  openDialog() {
+    this.dialog.open(DialogElementExampleDialog);
+  }
+}
+
+@Component({
+  selector: 'dialog-elements-example-dialog',
+  templateUrl: 'delete.dialog.html',
+})
+export class DialogElementExampleDialog {
+  constructor(private dialog:MatDialog){
+  }
+  close(){
+    this.dialog.closeAll()
+ }
 }

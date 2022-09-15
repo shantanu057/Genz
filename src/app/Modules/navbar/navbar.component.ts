@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginService } from 'src/app/Services/Login Service/Login.service';
+import { IUsers, LoginService } from 'src/app/Services/Login Service/Login.service';
 
 
 @Component({
@@ -11,15 +11,28 @@ import { LoginService } from 'src/app/Services/Login Service/Login.service';
 export class NavbarComponent implements OnInit {
   login:boolean=false
   admin:string=''
-  href:string=''
-  constructor(private _login:LoginService) { }
+  name:string=''
+  id:number=0
+  constructor(private _login:LoginService,private _router:Router) { }
 
   ngOnInit(): void {
     console.log("Working")
+    this._login.id$.subscribe((data:number)=>{
+      this.id=data ;
+  });
     this._login.user$.subscribe((data:boolean)=>{
       this.login = data
     });
-    
+    this._login.name$.subscribe((data:string)=>{
+      this.name = data
+    });
+  }
+  userDetails(){
+    this._router.navigate(['profile',this.id]);
+  }
+  LogOut(){
+    this._router.navigate(['']);
+    this.login = false
   }
 // // checkLoginURL(){
 // //   setTimeout( ()=>{
