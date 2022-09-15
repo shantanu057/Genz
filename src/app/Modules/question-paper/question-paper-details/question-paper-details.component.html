@@ -1,30 +1,31 @@
+<!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="utf-8"/>
-      <title>bootstrap 4 landing page with slider</title>
-<!--   
-      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
-  
-      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-  
-      <link rel="stylesheet" type="text/css" href="question-paper-details.component.ts"/>
-  
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
-    </head>
-    <body>
+<head>
+	<meta charset="utf-8"/>
+	<title>bootstrap 4 landing page with slider</title>
+
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+	<link rel="stylesheet" type="text/css" href="question-paper-details.component.css"/>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+  <body  style="background-color: #18151f;">
     <br>
-  
-<mat-card style="background-color: #E5E4E2;">
+
+    <mat-card style="background-image: linear-gradient(to right,#211d2b, #483681); width: 90%; margin-top: 70px;" class="mx-auto">
 <h1 style="text-align: center;">Search Your Question Papers Here!!</h1>
 </mat-card>
 
-<mat-card style="box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset; padding-top: 40px;">
-    <div class="row col-md-12 mx-auto">
-  
-    <div class="col-md-4">
+<mat-card style="width: 90%; background-color: #fff;" class="mx-auto">
+<div class="row col-md-12 mx-auto" >
+    
+    <div class="col-md-3" style="margin-left: 30px;">
 
         <!-- <h4>Subject</h4> -->
-        <mat-form-field style="margin-left: 100px;" appearance="fill">
+        <mat-form-field appearance="fill">
             <mat-label>Select tyour Subject</mat-label>
             <mat-select matNativeControl required [formControl]="subjectControl">
             <mat-option value="Operating System">Operating System</mat-option>
@@ -41,8 +42,8 @@
         </mat-form-field>
         </div>
 
-    <div class="col-md-4">
-        <mat-form-field style="margin-left: 100px;" appearance="fill">
+        <div class="col-md-3" style="margin-left:  30px;">
+            <mat-form-field appearance="fill">
             <mat-label>Select your College</mat-label>
             <mat-select  matNativeControl required [formControl]="collegeNameControl">
            
@@ -59,8 +60,8 @@
         </mat-form-field>
         </div>
 
-        <div class="col-md-4">
-            <mat-form-field style="margin-left: 100px;" appearance="fill">
+        <div class="col-md-3" style="margin-left: 20px;">
+            <mat-form-field appearance="fill">
                 <mat-label>Select Your Course</mat-label>
                 <mat-select matNativeControl required [formControl]="courseControl">
                 <!-- <mat-option>All</mat-option> -->
@@ -73,21 +74,23 @@
                   <mat-hint>Select the Course</mat-hint>
             </mat-form-field>
             </div>
+            <div class="col-md-2">
+                <button (click)=" filterQuestionPapers()" style="background-color:#110f16;width: 50px; color: white;height:53px" mat-button color="warn" ><mat-icon>search</mat-icon></button>
+            </div>
     </div>
 
                 <br>
-<button (click)=" filterQuestionPapers()" style="margin-left: 40%;background-color:#5369f8;width: 250px; color: white;"mat-button color="warn">Search</button>
+<!-- <button (click)=" filterQuestionPapers()" style="margin-left: 40%;background-color:#5369f8;width: 250px; color: white;"mat-button color="warn">Search</button> -->
 </mat-card>
 <br>
-
-<mat-card class="mx-auto" style="background-color: #E5E4E2; width: 90%;">
+<!-- <mat-card class="mx-auto" style="background-image: linear-gradient(to right,#101531, #5369f8); width: 85%;">
     <h1>List Of Question Papers!!</h1>
-    </mat-card>
+    </mat-card> -->
     <br>
-    <mat-card class="mx-auto" style="width: 90%;background-color: #eeeeee;">
-        <div class="row col-md-11 mx-auto" style="max-width: 100%;">
+    <!-- <mat-card class="mx-auto" style="width: 85%;">  -->
+        <div class="row col-md-11 mx-auto" >
     <div class="col-md-4" *ngFor="let questionpaperdata of Qdata">
-        <mat-card class="matcard" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+        <!-- <mat-card class="matcard" style="box-shadow: #101531 0px 2px 4px, #EDF0FE 0px 7px 13px -3px, #101531 0px -3px 0px inset;">
             <img style="margin-left: 35px" src="{{questionpaperdata.qimage}}">
             <br><br>
             <div class="row">
@@ -104,10 +107,32 @@
                 <button style="background-color: blue;width: 100%; color: white;"  (click)="openDialog()" mat-button color="accent">Download</button>
                 </div>
             </div>
-        </mat-card>
+        </mat-card> -->
+
+        <div class="container h-100">
+            <div class="row align-middle">
+              <div class="col-md-6 col-lg-4 column">
+                <div class="card gr-3 random">
+                  <div class="txt">
+                  
+                    <img style="margin-left: 15px;margin-bottom: 10px;" src="{{questionpaperdata.qimage}}">
+                    
+                  </div>
+                  <label>Subject:{{questionpaperdata.subjectname}}</label><br>
+                  <label>College Name:{{questionpaperdata.collegename}}</label><br>
+                  <label>Course:{{questionpaperdata.course}}</label><br>
+                  <div class="row col-md-12" style="margin-left: 55px;">
+                    <div class="col-md-6">
+                    <button style="background-color: blue;width: 110%; color: white;"  (click)="openDialog()" mat-button color="accent">Download</button>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+        </div>
         <br>
     </div>
 </div>
-    </mat-card>
+    <!-- </mat-card> -->
     </body>
 </html>

@@ -120,14 +120,6 @@
 
   "profile": {
     "name": "typicode"
-  },
-  "questionPapers":[
-    {"questionPaperid":1,"subjectname":"Java","collegename":"IIT Bombay","course":"BE","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu0jZMcr-ns9j9DAuSAnB54PVXDvjeVw0_RJQyyBidSbbosX2QzNgMKNpvTzGGAiONHaU&usqp=CAU"},
-    {"questionPaperid":2,"subjectname":"DBMS","collegename":"IIT Kanpur","course":"B-Tech","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"},
-    {"questionPaperid":3,"subjectname":"OOPS","collegename":"IIT Banglore","course":"BE","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"},
-    {"questionPaperid":4,"subjectname":"Operating System","collegename":"IIT Delhi","course":"B-Tech","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"},
-    {"questionPaperid":5,"subjectname":"Data Structures","collegename":"IIT Bombay","course":"BE","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"},
-    {"questionPaperid":6,"subjectname":"Fluid Mechanics","collegename":"IIT Mumbai","course":"B-Tech","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"}
-]
+  }
 }
 

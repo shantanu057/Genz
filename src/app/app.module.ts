@@ -49,7 +49,7 @@ import { ProfileModule } from './Modules/profile/profile.module';
     HomePageModule,
     NavbarModule,
     DashboardModule,
-   NavbarModule,,MatDialogModule,ProfileModule
+   NavbarModule,MatDialogModule,ProfileModule
   ],
   providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService,LoginService],
   bootstrap: [AppComponent]
