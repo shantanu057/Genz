@@ -64,6 +64,10 @@ export class QuestionPaperDetailsComponent implements OnInit {
   templateUrl: 'questionPaperDownload.dialog.html',
 })
 export class DialogElementsExampleDialog {
-
+  constructor(private dialog:MatDialog){
+  }
+  close(){
+    this.dialog.closeAll()
+ }
 }
 

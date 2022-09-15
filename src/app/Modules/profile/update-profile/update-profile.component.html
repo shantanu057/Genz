@@ -1,0 +1,117 @@
+
+<head>
+	<meta charset="utf-8"/>
+	<title>bootstrap 4 landing page with slider</title>
+
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+	<link rel="stylesheet" type="text/css" href="update-profile.component.css"/>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<br><br><br><br>
+<mat-card style="background: linear-gradient(-30deg, #000428 100%,#004e92 0%);" class="col-md-10 mx-auto">
+    <div class="row col-md-12" style="margin-top: 10px;">
+        <div class="col-md-4">
+            <button style="width: 60%;background-color: rgb(20, 20, 101);margin-left: 60px;" type="button" class="btn btn-primary" (click)="viewProfile(userurl)">Back To Profile</button>
+        </div>
+        <div class="col-md-4">
+            <h1 style="text-align: center;color:white">Update Your Profile</h1>
+        </div>
+    </div>
+    </mat-card>
+<mat-card style="margin-top: 10px;width: 84%; background-color: #f2e5f9;" class="mx-auto">
+<form class="example-form" style="margin-left: 65px;">
+
+    <div class="row col-sm-12">
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" [(ngModel)]="viewname" name="name" placeholder=" Name">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>College</mat-label>
+            <input matInput type="text" [(ngModel)]="viewcollege" name="college" placeholder="College">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email Id</mat-label>
+            <input matInput type="text" [(ngModel)]="viewemail" name="email" placeholder="Email">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row col-sm-12">
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Contact Number</mat-label>
+            <input matInput type="text" [(ngModel)]="viewcontact" name="contactno" placeholder="ContactNo">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Address</mat-label>
+            <input matInput type="text" [(ngModel)]="viewaddress" name="Address" placeholder="Address">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+            <button style="width: 57%;margin-top: 5px;" type="button" class="btn btn-success" >Update</button>
+        </div>
+    </div>
+</form>
+<br>
+<div class="row col-md-12" style="margin-left:50px">
+    <!-- <div class="col-md-1"></div> -->
+        <div class="col-md-5">
+            <mat-card style="background-color: #d6bbf1;">
+                <h2>Your Books</h2>
+                <div *ngFor="let bookdata of data" >
+                    <br>
+                    <mat-card class="matcard" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+                        <img style="margin-left: 90px; height: 150px;width: 150px;" src="{{bookdata.imglink}}">
+                        <br><br>
+                        <label>Book Name:{{bookdata.bookname}}</label><br>
+                        <label>Book Author:{{bookdata.bookauthor}}</label><br>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <label>Course:{{bookdata.course}}</label>
+                            <br>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Price:{{bookdata.price}}</label>
+                            </div>
+                        </div>
+                        <br>
+                        <button class="btn btn-danger" style="margin-left:28%;width:140px" (click)="openDialog()">Delete</button>
+                        </mat-card>
+                    </div>
+            </mat-card>
+
+        </div>
+
+
+    <div class="col-md-5">
+        <mat-card style="background-color: #d6bbf1;">
+            <h2>Your Question Papers</h2>
+            <div *ngFor="let qpaperdata of qdata" >
+                <br>
+                <mat-card class="matcard" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+                    <img style="margin-left: 90px; height: 150px;width: 150px;" src="{{qpaperdata.qimage}}">
+                    <br><br>
+                    <label>Subject:{{qpaperdata.subjectname}}</label><br>
+                    <label>College:{{qpaperdata.collegename}}</label><br>
+                    <label>Course:{{qpaperdata.course}}</label>
+                        <br><br>
+                        <button class="btn btn-danger" style="margin-left:28%;width:140px">Delete</button>
+                    </mat-card>
+                </div>
+        </mat-card>
+    </div>
+</div>
+</mat-card>

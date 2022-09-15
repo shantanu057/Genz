@@ -1,16 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Ibooks } from 'src/app/Models/book.module';
 import { IquestionPaper } from 'src/app/Models/questionPaper.model';
+import { Users } from 'src/app/Models/user.module';
 
 @Component({
-  selector: 'app-view-profile',
-  templateUrl: './view-profile.component.html',
-  styleUrls: ['./view-profile.component.css']
+  selector: 'app-update-profile',
+  templateUrl: './update-profile.component.html',
+  styleUrls: ['./update-profile.component.css']
 })
-export class ViewProfileComponent implements OnInit {
-
+export class UpdateProfileComponent implements OnInit {
   viewname:string='';
   viewcollege:string='';
   viewemail:string='';
@@ -19,13 +20,13 @@ export class ViewProfileComponent implements OnInit {
   userdata!:any;
   userurl:string|null='';
   data:Ibooks[]=[];
-
+  user:Users[]=[];
   viewqsubject:string='';
   viewqcollege:string='';
   viewqcourse:string='';
   qdata:IquestionPaper[]=[]
 
-  constructor(private http:HttpClient, private _ActivatedRoute:ActivatedRoute, private _router:Router) { }
+  constructor(private http:HttpClient, private _ActivatedRoute:ActivatedRoute, private _router:Router,public dialog: MatDialog) { }
 
   ngOnInit(): void {
 
@@ -41,8 +42,7 @@ export class ViewProfileComponent implements OnInit {
       console.log(this.viewcontact);
     })
 
-
-      this.http.get<any>("http://localhost:3000/books").subscribe((bookdata:Ibooks[])=>{
+    this.http.get<any>("http://localhost:3000/books").subscribe((bookdata:Ibooks[])=>{
         this.data=bookdata.filter(x=>x.sellerid==this.userurl);
       })
 
@@ -50,12 +50,23 @@ export class ViewProfileComponent implements OnInit {
         this.qdata=qpaperdata.filter(x=>x.sellerid==this.userurl);
       })
 
-    }
-    UpdateProfile(id:any){
-      this._router.navigate(['app-update-profile',this.userurl]);
-    }
-    LogOut(){
-      this._router.navigate(['']);
-    }
-  }
+}
 
+viewProfile(bookdata:any){
+  this._router.navigate(['app-view-profile',this.userurl]);
+}
+openDialog() {
+  this.dialog.open(DialogElementDialog);
+}
+}
+@Component({
+  selector: 'dialog-elements-example-dialog',
+  templateUrl: 'delete-profile.dialog.html',
+})
+export class DialogElementDialog {
+  constructor(private dialog:MatDialog){
+  }
+  close(){
+    this.dialog.closeAll()
+ }
+}

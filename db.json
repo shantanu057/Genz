@@ -61,61 +61,185 @@
       "clgLocation": "Jammu",
       "Uname": "VVCE",
       "id": 5
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "password": "",
+      "address": "",
+      "mobile": "",
+      "clgname": "",
+      "clgLocation": "",
+      "Uname": "",
+      "id": 6
     }
-   
   ],
-  "Users":[
-      {"name":"gouthu","clg name":"mandya","emailid":"hrgoutham678@gmail.com","contact no":"7975079311","address":"mysore","sellerid":"1"},
-      {"name":"admin","clg name":"VVCE","emailid":"admin@gmail.com","contact no":"7975079311","address":"banglore","sellerid":"2"},
-      {"name":"shashank","clg name":"MIT","emailid":"shashank@gmail.com","contact no":"6712867832","address":"delhi","sellerid":"3"},
-      {"name":"prakhar","clg name":"DTM","emailid":"prakhar@gmail.com","contact no":"8888673672","address":"MP","sellerid":"4"},
-      {"name":"shanthanu","clg name":"NIT Bhopal","emailid":"shanthanu@gmail.com","contact no":"8888673672","address":"Banglore","sellerid":"5"}
-      
-      
+  "Users": [
+    {
+      "name": "Gouthu",
+      "collegename": "Mandya",
+      "emailid": "hrgoutham678@gmail.com",
+      "contactno": "7975079311",
+      "address": "Mysore",
+      "sellerid": "1"
+    },
+    {
+      "name": "Admin",
+      "collegename": "VVCE",
+      "emailid": "admin@gmail.com",
+      "contactno": "7975079311",
+      "address": "Banglore",
+      "sellerid": "2"
+    },
+    {
+      "name": "Shashank",
+      "collegename": "MIT",
+      "emailid": "shashank@gmail.com",
+      "contactno": "6712867832",
+      "address": "Delhi",
+      "sellerid": "3"
+    },
+    {
+      "name": "Prakhar",
+      "collegename": "DTM",
+      "emailid": "prakhar@gmail.com",
+      "contactno": "8888673672",
+      "address": "MP",
+      "sellerid": "4"
+    },
+    {
+      "name": "Shanthanu",
+      "collegename": "NIT Bhopal",
+      "emailid": "shanthanu@gmail.com",
+      "contactno": "8888673672",
+      "address": "Banglore",
+      "sellerid": "5"
+    }
   ],
-
-  "books":[
-    {"bookid":"1","bookname":"Fluid Mechanics", "bookauthor":"James", "course":"B.Tech", "price":400, "collegename":"Jabalpur Engineering College","sellername":"Rohan", "sellerContact":3454328676, "sellerAddress":"Indore", "imglink":"https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/I/51Ucq9ycHmL._SX331_BO1,204,203,200_.jpg","sellerid":"1"},
-
-    {"bookid":"2","bookname":"OOPS", "bookauthor":"Balaguruswami", "course":"B.Tech", "price":500, "collegename":"IIT Delhi", "sellername":"Arjun", "sellerContact":5434228676, "sellerAddress":"Pune", "imglink":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Rg98YBMJ5XF7kuF7559-n0aQfkBmagHA3w&usqp=CAU","sellerid":"2"},
-
-    {"bookid":"3","bookname":"DBMS", "bookauthor":"John", "course":"B.Tech", "price":300, "sellername":"Harshal", "sellerContact":6544328676, "sellerAddress":"Goa","imglink":"https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/I/51ZN4jV6j9L._SX348_BO1,204,203,200_.jpg","sellerid":"3"},
-
-    {"bookid":"4","bookname":"Computer Network", "bookauthor":"Andrew", "course":"B.Tech", "price":500, "sellername":"Yash", "collegename":"NIT Bhopal", "sellerContact":9876328676, "sellerAddress":"Puri", "imglink":"https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/I/51WWOcqo1CL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg","sellerid":"4"},
-
-    {"bookid":"5","bookname":"Data Structures", "bookauthor":"Mathew", "course":"B.Tech", "price":500, "sellername":"Ankita", "collegename":"IIT Mumbai", "sellerContact":4444328676, "sellerAddress":"Mysore", "imglink":"https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/I/51cAM0+OWDS._SX331_BO1,204,203,200_.jpg","sellerid":"5"},
-
-    {"bookid":"6","bookname":"Operating System", "bookauthor":"James", "course":"B.Tech", "price":300, "sellername":"Rohini", "collegename":"IIIT Hyderabad", "sellerContact":7774328676, "sellerAddress":"Jammu", "imglink":"https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/I/413Nwx4UyML._SY264_BO1,204,203,200_QL40_FMwebp_.jpg","sellerid":"2"}
+  "books": [
+    {
+      "bookid": "1",
+      "bookname": "Fluid Mechanics",
+      "bookauthor": "James",
+      "course": "B.Tech",
+      "price": 400,
+      "collegename": "Jabalpur Engineering College",
+      "sellername": "Rohan",
+      "sellerContact": 3454328676,
+      "sellerAddress": "Indore",
+      "imglink": "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/I/51Ucq9ycHmL._SX331_BO1,204,203,200_.jpg",
+      "sellerid": "1"
+    },
+    {
+      "bookid": "2",
+      "bookname": "OOPS",
+      "bookauthor": "Balaguruswami",
+      "course": "B.Tech",
+      "price": 500,
+      "collegename": "IIT Delhi",
+      "sellername": "Arjun",
+      "sellerContact": 5434228676,
+      "sellerAddress": "Pune",
+      "imglink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Rg98YBMJ5XF7kuF7559-n0aQfkBmagHA3w&usqp=CAU",
+      "sellerid": "2"
+    },
+    {
+      "bookid": "3",
+      "bookname": "DBMS",
+      "bookauthor": "John",
+      "course": "B.Tech",
+      "price": 300,
+      "sellername": "Harshal",
+      "sellerContact": 6544328676,
+      "sellerAddress": "Goa",
+      "imglink": "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/I/51ZN4jV6j9L._SX348_BO1,204,203,200_.jpg",
+      "sellerid": "3"
+    },
+    {
+      "bookid": "4",
+      "bookname": "Computer Network",
+      "bookauthor": "Andrew",
+      "course": "B.Tech",
+      "price": 500,
+      "sellername": "Yash",
+      "collegename": "NIT Bhopal",
+      "sellerContact": 9876328676,
+      "sellerAddress": "Puri",
+      "imglink": "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/I/51WWOcqo1CL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg",
+      "sellerid": "4"
+    },
+    {
+      "bookid": "5",
+      "bookname": "Data Structures",
+      "bookauthor": "Mathew",
+      "course": "B.Tech",
+      "price": 500,
+      "sellername": "Ankita",
+      "collegename": "IIT Mumbai",
+      "sellerContact": 4444328676,
+      "sellerAddress": "Mysore",
+      "imglink": "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/I/51cAM0+OWDS._SX331_BO1,204,203,200_.jpg",
+      "sellerid": "5"
+    },
+    {
+      "bookid": "6",
+      "bookname": "Operating System",
+      "bookauthor": "James",
+      "course": "B.Tech",
+      "price": 300,
+      "sellername": "Rohini",
+      "collegename": "IIIT Hyderabad",
+      "sellerContact": 7774328676,
+      "sellerAddress": "Jammu",
+      "imglink": "https://images-eu.ssl-images-amazon.com/images/W/WEBP_402378-T1/images/I/413Nwx4UyML._SY264_BO1,204,203,200_QL40_FMwebp_.jpg",
+      "sellerid": "2"
+    }
   ],
-
-  "Users":[
-    {"name":"Gouthu","collegename":"Mandya","emailid":"hrgoutham678@gmail.com","contactno":"7975079311","address":"Mysore","sellerid":"1"},
-    {"name":"Admin","collegename":"VVCE","emailid":"admin@gmail.com","contactno":"7975079311","address":"Banglore","sellerid":"2"},
-    {"name":"Shashank","collegename":"MIT","emailid":"shashank@gmail.com","contactno":"6712867832","address":"Delhi","sellerid":"3"},
-    {"name":"Prakhar","collegename":"DTM","emailid":"prakhar@gmail.com","contactno":"8888673672","address":"MP","sellerid":"4"},
-    {"name":"Shanthanu","collegename":"NIT Bhopal","emailid":"shanthanu@gmail.com","contactno":"8888673672","address":"Banglore","sellerid":"5"}
-    
-    ],
-
-    "questionPapers":[
-      {"questionPaperid":1,"subjectname":"Java","collegename":"IIT Bombay","course":"BE","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu0jZMcr-ns9j9DAuSAnB54PVXDvjeVw0_RJQyyBidSbbosX2QzNgMKNpvTzGGAiONHaU&usqp=CAU","sellerid":"1"},
-      {"questionPaperid":2,"subjectname":"DBMS","collegename":"IIT Kanpur","course":"B-Tech","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU","sellerid":"2"},
-      {"questionPaperid":3,"subjectname":"OOPS","collegename":"IIT Banglore","course":"BE","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU","sellerid":"3"},
-      {"questionPaperid":4,"subjectname":"Operating System","collegename":"IIT Delhi","course":"B-Tech","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU","sellerid":"4"},
-      {"questionPaperid":5,"subjectname":"Data Structures","collegename":"IIT Bombay","course":"BE","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU","sellerid":"5"},
-      {"questionPaperid":6,"subjectname":"Fluid Mechanics","collegename":"IIT Mumbai","course":"B-Tech","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU","sellerid":"6"}
+  "questionPapers": [
+    {
+      "questionPaperid": 1,
+      "subjectname": "Java",
+      "collegename": "IIT Bombay",
+      "course": "BE",
+      "qimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu0jZMcr-ns9j9DAuSAnB54PVXDvjeVw0_RJQyyBidSbbosX2QzNgMKNpvTzGGAiONHaU&usqp=CAU"
+    },
+    {
+      "questionPaperid": 2,
+      "subjectname": "DBMS",
+      "collegename": "IIT Kanpur",
+      "course": "B-Tech",
+      "qimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"
+    },
+    {
+      "questionPaperid": 3,
+      "subjectname": "OOPS",
+      "collegename": "IIT Banglore",
+      "course": "BE",
+      "qimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"
+    },
+    {
+      "questionPaperid": 4,
+      "subjectname": "Operating System",
+      "collegename": "IIT Delhi",
+      "course": "B-Tech",
+      "qimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"
+    },
+    {
+      "questionPaperid": 5,
+      "subjectname": "Data Structures",
+      "collegename": "IIT Bombay",
+      "course": "BE",
+      "qimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"
+    },
+    {
+      "questionPaperid": 6,
+      "subjectname": "Fluid Mechanics",
+      "collegename": "IIT Mumbai",
+      "course": "B-Tech",
+      "qimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"
+    }
   ],
-
   "profile": {
     "name": "typicode"
-  },
-  "questionPapers":[
-    {"questionPaperid":1,"subjectname":"Java","collegename":"IIT Bombay","course":"BE","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu0jZMcr-ns9j9DAuSAnB54PVXDvjeVw0_RJQyyBidSbbosX2QzNgMKNpvTzGGAiONHaU&usqp=CAU"},
-    {"questionPaperid":2,"subjectname":"DBMS","collegename":"IIT Kanpur","course":"B-Tech","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"},
-    {"questionPaperid":3,"subjectname":"OOPS","collegename":"IIT Banglore","course":"BE","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"},
-    {"questionPaperid":4,"subjectname":"Operating System","collegename":"IIT Delhi","course":"B-Tech","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"},
-    {"questionPaperid":5,"subjectname":"Data Structures","collegename":"IIT Bombay","course":"BE","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"},
-    {"questionPaperid":6,"subjectname":"Fluid Mechanics","collegename":"IIT Mumbai","course":"B-Tech","qimage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTI71GxFG3-6lwFapTF6eEDaNzdkPG9I5A&usqp=CAU"}
-]
+  }
 }
-

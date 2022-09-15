@@ -16,7 +16,9 @@ import { SellerPageComponent } from './Modules/books/seller-page/seller-page.com
 
 import { DashboardComponent } from './Modules/dashboard/dashboard.component';
 import { HomePageComponent } from './Modules/home-page/home-page.component';
-import { ViewProfileComponent } from './Modules/profile/view-profile/view-profile.component';
+import { BuySectionComponent } from './Modules/payment/buy-section/buy-section.component';
+import { UpdateProfileComponent } from './Modules/profile/update-profile/update-profile.component';
+
 const routes: Routes = [
   {path:'',component:HomePageComponent},
   {path:'login',component:LoginComponent},
@@ -25,18 +27,16 @@ const routes: Routes = [
   {path:'books',component:BooksComponent},
   {path:'app-book-details',component:BookDetailsComponent},
   {path:'app-display-books/:id', component:DisplayBooksComponent},
-
   {path:'app-update-book/:id',component:UpdateBookComponent},
   {path:'app-delete-book/:id',component:DeleteBookComponent},
-
   {path:'app-update-book',component:UpdateBookComponent},
-
-
   {path:'app-view-profile/:id', component:ViewProfileComponent},
   {path:'app-questionpaper', component:QuestionPaperDetailsComponent},
   {path:'app-seller-page',component:SellerPageComponent},
-
   {path:'home-page',component:HomePageComponent},
+  {path:'payment',component:BuySectionComponent},
+  {path:'profile/:id',component:ViewProfileComponent},
+  {path:'app-update-profile/:id',component:UpdateProfileComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
