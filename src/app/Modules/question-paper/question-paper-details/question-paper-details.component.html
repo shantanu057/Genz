@@ -12,10 +12,17 @@
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
+
+  <body  style="background-color: #18151f;">
+    <br>
+
+    <mat-card style="background-image: linear-gradient(to right,#211d2b, #483681); width: 90%; margin-top: 70px;" class="mx-auto">
+
   <body  style=" background-image: linear-gradient(to right,#202657, #5388b5);">
     <br>
 
     <mat-card style=" background-image: linear-gradient(to right,#000428, #004e92); width: 90%;" class="mx-auto">
+
 <h1 style="text-align: center;">Search Your Question Papers Here!!</h1>
 </mat-card>
 
@@ -115,7 +122,10 @@
                 <div class="card gr-3 random">
                   <div class="txt">
 
+                  
                     <img style="margin-left: 15px;margin-bottom: 10px;" src="{{questionpaperdata.qimage}}">
+                   
+
 
                   </div>
                   <label>Subject:{{questionpaperdata.subjectname}}</label><br>
@@ -126,9 +136,11 @@
                     <button style="background-color: blue;width: 110%; color: white;"  (click)="openDialog()" mat-button color="accent">Download</button>
                     </div>
                 </div>
+
                 <div class="ico-card">
                 <i class="fa fa-rebel"></i>
                 </div>
+
                 </div>
               </div>
             </div>
@@ -136,5 +148,7 @@
         <br>
     </div>
 </div>
-</body>
+
+    <!-- </mat-card> -->
+    </body>
 </html>

@@ -49,8 +49,11 @@ import { HttpClientModule } from '@angular/common/http';
     // HttpClientInMemoryWebApiModule.forRoot(BookDataService),
     HomePageModule,
     DashboardModule,
-    NavbarModule,MatFormFieldModule,MatDialogModule,ProfileModule,
-    MatDialogModule
+
+   NavbarModule,MatDialogModule,ProfileModule
+
+    NavbarModule
+
   ],
   providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService,LoginService],
   bootstrap: [AppComponent]

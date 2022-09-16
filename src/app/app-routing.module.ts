@@ -4,6 +4,12 @@ import { LoginComponent } from './Modules/authentication/login/login.component';
 import { SignUpComponent } from './Modules/authentication/sign-up/sign-up.component';
 import { BookDetailsComponent } from './Modules/books/book-details/book-details.component';
 import { BooksComponent } from './Modules/books/books.component';
+import { DisplayBooksComponent } from './Modules/books/display-books/display-books.component';
+import { UpdateBookComponent } from './Modules/books/update-book/update-book.component';
+import { DashboardComponent } from './Modules/dashboard/dashboard.component';
+import { HomePageComponent } from './Modules/home-page/home-page.component';
+import { ViewProfileComponent } from './Modules/profile/view-profile/view-profile.component';
+
 import { DeleteBookComponent } from './Modules/books/delete-books/delete-books.component';
 import { DisplayBooksComponent } from './Modules/books/display-books/display-books.component';
 import { UpdateBookComponent } from './Modules/books/update-book/update-book.component';
@@ -33,6 +39,7 @@ const routes: Routes = [
   {path:'app-view-profile/:id', component:ViewProfileComponent},
   {path:'app-questionpaper', component:QuestionPaperDetailsComponent},
   {path:'app-seller-page',component:SellerPageComponent},
+
   {path:'home-page',component:HomePageComponent},
   {path:'payment',component:BuySectionComponent},
   {path:'profile/:id',component:ViewProfileComponent},
