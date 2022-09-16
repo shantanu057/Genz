@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Ibooks } from 'src/app/Models/book.module';
 import { IquestionPaper } from 'src/app/Models/questionPaper.model';
 
@@ -25,7 +25,7 @@ export class ViewProfileComponent implements OnInit {
   viewqcourse:string='';
   qdata:IquestionPaper[]=[]
 
-  constructor(private http:HttpClient, private _ActivatedRoute:ActivatedRoute) { }
+  constructor(private http:HttpClient, private _ActivatedRoute:ActivatedRoute, private _router:Router) { }
 
   ngOnInit(): void {
 
@@ -41,7 +41,7 @@ export class ViewProfileComponent implements OnInit {
       console.log(this.viewcontact);
     })
 
-  
+
       this.http.get<any>("http://localhost:3000/books").subscribe((bookdata:Ibooks[])=>{
         this.data=bookdata.filter(x=>x.sellerid==this.userurl);
       })
@@ -49,7 +49,13 @@ export class ViewProfileComponent implements OnInit {
       this.http.get<any>("http://localhost:3000/questionPapers").subscribe((qpaperdata:IquestionPaper[])=>{
         this.qdata=qpaperdata.filter(x=>x.sellerid==this.userurl);
       })
-  
+
+    }
+    UpdateProfile(id:any){
+      this._router.navigate(['app-update-profile',this.userurl]);
+    }
+    LogOut(){
+      this._router.navigate(['']);
     }
   }
 

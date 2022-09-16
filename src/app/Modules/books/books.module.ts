@@ -14,6 +14,14 @@ import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { UpdateBookComponent } from './update-book/update-book.component';
 import { HttpClientModule } from '@angular/common/http';
+import {MatDialogModule} from '@angular/material/dialog';
+import { LoginService } from 'src/app/Services/Login Service/Login.service';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { DeleteBookComponent } from './delete-books/delete-books.component';
+
+
+import {MatIconModule} from '@angular/material/icon';
+import { SellerPageComponent } from './seller-page/seller-page.component'
 
 
 
@@ -23,12 +31,18 @@ import { HttpClientModule } from '@angular/common/http';
     BookDetailsComponent,
     DisplayBooksComponent,
     UpdateBookComponent,
+
+    DeleteBookComponent,
+    SellerPageComponent,
+
   ],
   imports: [
     CommonModule,MatSelectModule,
     MatCardModule,MatButtonModule,FormsModule,
-    ReactiveFormsModule,MatFormFieldModule,MatInputModule,RouterModule,HttpClientModule
+    ReactiveFormsModule,MatFormFieldModule,MatInputModule,
+    RouterModule,HttpClientModule,MatIconModule,MatDialogModule
   ],
-  exports:[BookDetailsComponent,DisplayBooksComponent,UpdateBookComponent]
+  exports:[BookDetailsComponent,DisplayBooksComponent,UpdateBookComponent,DeleteBookComponent],
+  providers:[LoginService]
 })
 export class BooksModule { }

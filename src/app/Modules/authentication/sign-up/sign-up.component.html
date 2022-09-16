@@ -51,21 +51,21 @@
                                         <table class="example-full-width" cellspacing="0"><tr>
                                         <mat-form-field appearance="fill">
                                             <mat-label>College name</mat-label>
-                                            <select matNativeControl required formControlName="clgname">
-                                              <option value="IIT Delhi">IIT Delhi</option>
-                                              <option value="NIT bhopal">NIT Bhopal</option>
-                                              <option value="IIT Mumbai">IIT Mumbai</option>
-                                              <option value="IIT Hyderabad">IIT Hyderabad</option>
-                                            </select>
+                                            <mat-select matNativeControl required formControlName="clgname">
+                                              <mat-option value="IIT Delhi">IIT Delhi</mat-option>
+                                              <mat-option value="NIT bhopal">NIT Bhopal</mat-option>
+                                              <mat-option value="IIT Mumbai">IIT Mumbai</mat-option>
+                                              <mat-option value="IIT Hyderabad">IIT Hyderabad</mat-option>
+                                            </mat-select>
                                           </mat-form-field>
                                          <td style="padding-left:20px"> <mat-form-field appearance="fill">
                                             <mat-label>College Location</mat-label>
-                                            <select matNativeControl required formControlName="clgLocation">
-                                              <option value="pune">PUNE</option>
-                                              <option value="banglore">BANGLORE</option>
-                                              <option value="mysore">MYSORE</option>
-                                              <option value="jammu">JAMMU</option>
-                                            </select>
+                                            <mat-select matNativeControl required formControlName="clgLocation">
+                                              <mat-option value="pune">PUNE</mat-option>
+                                              <mat-option value="banglore">BANGLORE</mat-option>
+                                              <mat-option value="mysore">MYSORE</mat-option>
+                                              <mat-option value="jammu">JAMMU</mat-option>
+                                            </mat-select>
                                           </mat-form-field></td>
 
                                           </tr></table>
@@ -88,7 +88,7 @@
                                                 </mat-form-field></td>
                                               </tr></table>
                                             </div>
-                                    <button mat-raised-button class="btn btn-primary" style="width:80%" >SignUp</button>
+                                    <button mat-raised-button class="btn btn-primary" style="width:425px" >SignUp</button>
                                     <p class="text-muted text-center mt-3 " >Already have an account? <a  routerLink="/login" style="margin-right: 90px;">login</a></p>
                                 </form>
                             </div>

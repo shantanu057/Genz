@@ -11,7 +11,9 @@ body {
 .dark {
   background: #110f16;
 }
-
+.dark1{
+  background-image: linear-gradient(to right,#202657, #5388b5)
+}
 .light {
   background: #f3f5f7;
 }

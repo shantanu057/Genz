@@ -41,7 +41,11 @@ background: linear-gradient(170deg, #B4EC51 0%, #429321 100%);
 }
 
 .gr-3 {
+
 background: linear-gradient(-30deg, #000428 1000%, #004e92 0%);
+
+ background-image: linear-gradient(to right,#000428, #004e92)
+
 
 /* background:  linear-gradient(-30deg, rgba(0, 118, 189, 0.1) 0%, #0076bd); */
 }
@@ -154,4 +158,8 @@ border-radius: 4px;
 box-shadow: rgb(172, 165, 165) 0px 0px 0px 0px,
 
 rgb(171, 169, 222) 10px 10px 20px 0px;
+
 }
+
+}
+

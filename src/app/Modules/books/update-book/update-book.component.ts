@@ -11,7 +11,7 @@ import { fadein } from '../display-books/Carousel/carousel.animation';
   selector: 'app-update-book',
   templateUrl: './update-book.component.html',
   styleUrls: ['./update-book.component.css'],
-  animations: [ 
+  animations: [
     trigger("slideAnimation", [
       transition("void => *", [useAnimation(fadein, {params: { time: '1000ms' }} )]),
       transition("* => void", [useAnimation(fadeOut, {params: { time: '1000ms' }})]),
@@ -26,7 +26,7 @@ export class UpdateBookComponent implements OnInit {
   viewprice:number=0;
   viewbookauthor:string='';
   viewsellercontact:number=0;
-  viewselleraddress:string='';
+  viewaddress:string='';
   viewimage:string='';
   viewsellername:string='';
   book!:Ibooks;
@@ -47,7 +47,7 @@ export class UpdateBookComponent implements OnInit {
       this.viewcollege=this.book.collegename;
       this.viewcourse=this.book.course;
       this.viewprice=this.book.price;
-      this.viewselleraddress=this.book.sellerAddress;
+      this.viewaddress=this.book.sellerAddress;
       this.viewbookauthor=this.book.bookauthor;
       this.viewsellercontact=this.book.sellerContact;
       this.viewsellername=this.book.sellername;

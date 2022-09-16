@@ -1,5 +1,5 @@
   <div id="main-wrapper">
-    <div class="row justify-content-center" style="padding-top: 100px; padding-right: 100px; padding-left: 100px; box-shadow: 0px 40px 25px -30px rgba(255, 252, 252, 0.66); border-radius: 10px;">
+    <div class="row justify-content-center" style="padding-top: 100px; padding-right: 100px; padding-left: 100px;">
         <div class="col-xl-10">
             <div class="card border-0 random">
                 <div class="card-body p-0">
@@ -13,7 +13,7 @@
                                 <h3 class="h5 mb-0" ><b>Welcome To Genz</b></h3>
                                 <p class="text-muted mt-2 mb-5">Enter your email address and password to access User panel.</p>
 
-                                 <form  [formGroup]="StudentForm" (ngSubmit)="login()">
+                                 <form  [formGroup]="StudentForm" (ngSubmit)="login();check()">
                                     <div class="form-group">
                                         <table class="example-full-width" cellspacing="0"><tr>
                                             <mat-form-field class="example-full-width" appearance="fill" style="width: 300px;">
@@ -37,7 +37,7 @@
                                         </table>
 
                                     </div>
-                                    <button mat-raised-button class="btn btn-primary" style="width:300px" (click)="checkDashURL()">Login</button>
+                                    <button mat-raised-button class="btn btn-primary" style="width:300px;">Login</button>
                                     <p class="text-muted text-center mt-3 mb-0" style="padding-right: 30%" >Don't have an account? <a  routerLink="/registration" class="text-primary ml-1">register</a></p>
                                 </form>
                             </div>

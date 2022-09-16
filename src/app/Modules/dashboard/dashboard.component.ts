@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { LoginComponent } from '../authentication/login/login.component';
-import { NavbarComponent } from '../navbar/navbar.component';
+import { LoginService } from 'src/app/Services/Login Service/Login.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,19 +7,14 @@ import { NavbarComponent } from '../navbar/navbar.component';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  href:string=''
-  userName:string=''
-  constructor(private route: Router,
-              private navbar:NavbarComponent,
-              private logComp:LoginComponent) { }
+  admin:string=''
+  hello:string=''
+  constructor(private _login:LoginService) { }
 
   ngOnInit(): void {
-    this.logComp.user$.subscribe((data:string)=>{
-      this.userName = data;
-      console.log(this.userName)
+    this._login.admin$.subscribe((data:string)=>{
+      this.admin = data
+      // console.log(this.admin)
     });
-      // this.href = this.route.url
-      // console.log(this.href)
-      // this.navbar.random(this.href)
   }
 }

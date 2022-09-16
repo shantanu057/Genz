@@ -3,13 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Ibooks } from 'src/app/Models/book.module';
-import { BookService } from 'src/app/Services/Book Details/BookDetails.service';
+import { LoginService } from 'src/app/Services/Login Service/Login.service';
+import { DashboardComponent } from '../../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-book-details',
   templateUrl: './book-details.component.html',
   styleUrls: ['./book-details.component.css'],
-  providers:[BookService]
 })
 export class BookDetailsComponent implements OnInit {
 
@@ -18,8 +18,9 @@ export class BookDetailsComponent implements OnInit {
   usercollege:Ibooks[]=[];
   usercourse:Ibooks[]=[];
   userbooks:Ibooks[]=[];
+  admin:string=''
 
-  constructor(private bookservice:BookService, private _router:Router, private http:HttpClient) { }
+  constructor(private _router:Router, private http:HttpClient,private _login:LoginService) { }
 
   locationControl = new FormControl('', Validators.required);
   collegeControl = new FormControl('', Validators.required);
@@ -31,12 +32,12 @@ export class BookDetailsComponent implements OnInit {
     // this.bookservice.getBooksByApi().subscribe((bookdata:Ibooks[])=>{
     //   this.data=bookdata;
     // })
-
     this.http.get<any>("http://localhost:3000/books").subscribe((bookdata:Ibooks[])=>{
         this.data=bookdata ;
-    })
-
-    }; 
+    });
+    this.admin = this._login.myAdmin
+    console.log(this.admin)
+    };
 
 
   filterbooks(){
@@ -58,5 +59,10 @@ export class BookDetailsComponent implements OnInit {
   viewBook(bookdata:any){
     this._router.navigate(['app-display-books',bookdata.bookid]);
   }
-
+  editBook(bookdata:any){
+    this._router.navigate(['app-update-book',bookdata.bookid]);
+  }
+  deleteBook(bookdata:any){
+    this._router.navigate(['app-delete-book',bookdata.bookid]);
+  }
 }

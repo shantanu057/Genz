@@ -81,29 +81,8 @@ h1{
 	z-index: 1;
 }
 
-/* for 3d button */
-
-  /* .pushable {
-    background: rgb(1, 175, 12);
-    border-radius: 12px;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    outline-offset: 4px;
-  }
-  .front {
-    display: block;
-    padding: 12px 42px;
-    border-radius: 12px;
-    font-size: 1.25rem;
-    background: rgb(14, 179, 3);
-    color: white;
-    transform: translateY(-6px);
-  }
-
-  .pushable:active .front {
-    transform: translateY(-2px);
-  } */
-
+.detailsDisplayCard{
+  background-color: #f9f7ff;
+}
   
   

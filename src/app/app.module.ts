@@ -20,9 +20,10 @@ import { questionPaperService } from './Services/QuestionPaper Details/questionP
 import {MatDialogModule} from '@angular/material/dialog';
 import { PaymentModule } from './Modules/payment/payment.module';
 import { DashboardModule } from './Modules/dashboard/dashboard.module';
-import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './Services/Login Service/Login.service';
 import { ProfileModule } from './Modules/profile/profile.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -47,9 +48,12 @@ import { ProfileModule } from './Modules/profile/profile.module';
     HttpClientInMemoryWebApiModule,
     // HttpClientInMemoryWebApiModule.forRoot(BookDataService),
     HomePageModule,
-    NavbarModule,
     DashboardModule,
+
    NavbarModule,MatDialogModule,ProfileModule
+
+    NavbarModule
+
   ],
   providers: [BookService,BookDataService,LoginComponent,NavbarComponent,questionPaperService,LoginService],
   bootstrap: [AppComponent]
